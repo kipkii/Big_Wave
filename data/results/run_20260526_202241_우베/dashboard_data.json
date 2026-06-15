@@ -1,0 +1,488 @@
+{
+  "run_id": "run_20260526_202241_우베",
+  "keyword": "우베",
+  "keyword_set": {
+    "canonical": "우베",
+    "alias": [
+      "ube",
+      "우베 디저트",
+      "우베맛"
+    ],
+    "typo": [
+      "우배"
+    ],
+    "related": [
+      "보라색 디저트",
+      "필리핀 디저트",
+      "우베 케이크"
+    ]
+  },
+  "keyword_set_mode": "preset",
+  "analysis_options": {
+    "selected_sources": [
+      "naver_news"
+    ],
+    "analysis_days": 90,
+    "include_related": false,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_news"
+  ],
+  "missing_sources": [],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다.",
+    "연관 키워드(term_type=related)를 제외한 핵심 키워드 기준 분석입니다."
+  ],
+  "summary": {
+    "ts_score": 37.3,
+    "status_label": "Low",
+    "collected_items": 262,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 42.4,
+    "reaction_score": 0.0,
+    "saturation_score": 57.1,
+    "decline_risk": 30.0
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-04-30",
+        "value": 18.4
+      },
+      {
+        "period": "2026-05-01",
+        "value": 10.8
+      },
+      {
+        "period": "2026-05-02",
+        "value": 18.4
+      },
+      {
+        "period": "2026-05-03",
+        "value": 10.8
+      },
+      {
+        "period": "2026-05-04",
+        "value": 15.2
+      },
+      {
+        "period": "2026-05-05",
+        "value": 20.8
+      },
+      {
+        "period": "2026-05-06",
+        "value": 27.1
+      },
+      {
+        "period": "2026-05-07",
+        "value": 24.4
+      },
+      {
+        "period": "2026-05-08",
+        "value": 22.7
+      },
+      {
+        "period": "2026-05-09",
+        "value": 22.7
+      },
+      {
+        "period": "2026-05-10",
+        "value": 33.4
+      },
+      {
+        "period": "2026-05-11",
+        "value": 41.2
+      },
+      {
+        "period": "2026-05-12",
+        "value": 41.9
+      },
+      {
+        "period": "2026-05-13",
+        "value": 15.2
+      },
+      {
+        "period": "2026-05-14",
+        "value": 27.1
+      },
+      {
+        "period": "2026-05-15",
+        "value": 32.7
+      },
+      {
+        "period": "2026-05-16",
+        "value": 22.7
+      },
+      {
+        "period": "2026-05-17",
+        "value": 20.8
+      },
+      {
+        "period": "2026-05-18",
+        "value": 39.4
+      },
+      {
+        "period": "2026-05-19",
+        "value": 39.4
+      },
+      {
+        "period": "2026-05-20",
+        "value": 31.9
+      },
+      {
+        "period": "2026-05-21",
+        "value": 22.7
+      },
+      {
+        "period": "2026-05-22",
+        "value": 22.7
+      },
+      {
+        "period": "2026-05-23",
+        "value": 10.8
+      },
+      {
+        "period": "2026-05-24",
+        "value": 18.4
+      },
+      {
+        "period": "2026-05-25",
+        "value": 22.7
+      },
+      {
+        "period": "2026-05-26",
+        "value": 38.2
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-04-30",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-01",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-02",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-03",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-04",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-05",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-06",
+        "value": 8,
+        "weighted_value": 8.0
+      },
+      {
+        "period": "2026-05-07",
+        "value": 6,
+        "weighted_value": 6.0
+      },
+      {
+        "period": "2026-05-08",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-09",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-10",
+        "value": 15,
+        "weighted_value": 15.0
+      },
+      {
+        "period": "2026-05-11",
+        "value": 32,
+        "weighted_value": 32.0
+      },
+      {
+        "period": "2026-05-12",
+        "value": 34,
+        "weighted_value": 34.0
+      },
+      {
+        "period": "2026-05-13",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-14",
+        "value": 8,
+        "weighted_value": 8.0
+      },
+      {
+        "period": "2026-05-15",
+        "value": 14,
+        "weighted_value": 14.0
+      },
+      {
+        "period": "2026-05-16",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-17",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-18",
+        "value": 27,
+        "weighted_value": 27.0
+      },
+      {
+        "period": "2026-05-19",
+        "value": 27,
+        "weighted_value": 27.0
+      },
+      {
+        "period": "2026-05-20",
+        "value": 13,
+        "weighted_value": 13.0
+      },
+      {
+        "period": "2026-05-21",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-22",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-23",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-24",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-25",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-26",
+        "value": 24,
+        "weighted_value": 24.0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "naver_news",
+        "count": 262,
+        "ratio": 100.0
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "우베",
+      "term_type": "canonical",
+      "count": 120,
+      "weighted_count": 120.0
+    },
+    {
+      "term": "ube",
+      "term_type": "alias",
+      "count": 86,
+      "weighted_count": 86.0
+    },
+    {
+      "term": "우베 디저트",
+      "term_type": "alias",
+      "count": 52,
+      "weighted_count": 52.0
+    },
+    {
+      "term": "우베맛",
+      "term_type": "alias",
+      "count": 4,
+      "weighted_count": 4.0
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "국민 간식 등극…CU '연세우유 크림빵' 1억개 판매 신화",
+      "source": "naver_news",
+      "term": "우베맛",
+      "term_type": "alias",
+      "published_at": "2026-04-30",
+      "url": "https://www.wolyo.co.kr/news/articleView.html?idxno=311588",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "[비즈 트래블] &quot;정글 위로 흐르는 단짠의 조화…필리핀, '경험'을 요리하...",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-04-30",
+      "url": "http://www.bizwnews.com/news/articleView.html?idxno=135271",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "보랏빛 '우베' 열풍⋯음료·디저트 존재감 커진다",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-04-30",
+      "url": "https://n.news.naver.com/mnews/article/031/0001026032?sid=101",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "BTS만 보랏빛 열풍이 아니다…식품업계, 말차 대항마 '우베' 내세워",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-05-01",
+      "url": "https://n.news.naver.com/mnews/article/003/0013921222?sid=101",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "&quot;포스트 두쫀쿠는 보랏빛&quot;…유통가, '우베'에 꽂힌 이유는",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-05-02",
+      "url": "https://www.etoday.co.kr/news/view/2580077",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "`보랏빛 우베` 뭐길래…여기저기 다 나오네[이 집! 지금, 이 맛]",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-05-02",
+      "url": "https://n.news.naver.com/mnews/article/018/0006272194?sid=103",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "요즘 인기 보랏빛 음료 우리도…GS25, 상반기 PB제품 '우베맛' 음료 낸다",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-05-02",
+      "url": "https://n.news.naver.com/mnews/article/421/0008923816?sid=101",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "[이슈in] &quot;보라색이면 다 우베야?&quot;… 빙그레 메로나 먼저였다, 스타벅스...",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-05-03",
+      "url": "https://www.newscj.com/news/articleView.html?idxno=3397908",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "양방향 척추내시경(<b>UBE</b>), 고난도 척추 수술에서의 회복 접근 변화",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-05-04",
+      "url": "http://www.medisobizanews.com/news/articleView.html?idxno=138132",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "와플대학, ‘우베 시리즈’ 출시…보랏빛 디저트 라인업 확대",
+      "source": "naver_news",
+      "term": "ube",
+      "term_type": "alias",
+      "published_at": "2026-05-04",
+      "url": "https://www.sentv.co.kr/article/view/sentv202605040066",
+      "views": 0,
+      "engagements": 0
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 37.3점이며 상태는 Low입니다.",
+    "evidence": "최근 평균 Trend Index는 23.9143이고, 피크 대비 하락률은 42.9253%입니다. 가장 많은 raw item이 수집된 채널은 naver_news입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 23.9143,
+      "previous_mean": 28.1857,
+      "peak_trend_index": 41.9,
+      "recent_slope": 6.3,
+      "decline_from_peak": 42.9253,
+      "total_mentions": 262.0,
+      "total_weighted_mentions": 262.0,
+      "total_views": 0.0,
+      "total_engagements": 0.0,
+      "view_per_item": 0.0,
+      "engagement_per_item": 0.0,
+      "source_diversity": 1.0,
+      "active_days": 27,
+      "coverage_ratio": 1.0,
+      "weekly_rows": 5
+    },
+    "processed_rows": {
+      "term_daily": 46,
+      "keyword_daily": 27,
+      "weekly_partition": 5
+    }
+  }
+}

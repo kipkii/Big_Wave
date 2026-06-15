@@ -1,0 +1,207 @@
+{
+  "keyword": "왁뿌볼",
+  "keyword_set": {
+    "canonical": "왁뿌볼",
+    "terms": [
+      {
+        "term": "왁뿌볼",
+        "term_type": "canonical",
+        "term_weight": 1.0
+      },
+      {
+        "term": "왁타버스 인형",
+        "term_type": "alias",
+        "term_weight": 0.8
+      },
+      {
+        "term": "이세계 아이돌 인형",
+        "term_type": "alias",
+        "term_weight": 0.8
+      },
+      {
+        "term": "왁타버스 굿즈",
+        "term_type": "alias",
+        "term_weight": 0.7
+      },
+      {
+        "term": "이세돌 굿즈",
+        "term_type": "alias",
+        "term_weight": 0.7
+      },
+      {
+        "term": "왁굳 인형",
+        "term_type": "alias",
+        "term_weight": 0.6
+      },
+      {
+        "term": "팬치 인형",
+        "term_type": "alias",
+        "term_weight": 0.6
+      },
+      {
+        "term": "왁프볼",
+        "term_type": "typo",
+        "term_weight": 0.6
+      },
+      {
+        "term": "악뿌볼",
+        "term_type": "typo",
+        "term_weight": 0.5
+      },
+      {
+        "term": "왁구볼",
+        "term_type": "typo",
+        "term_weight": 0.5
+      },
+      {
+        "term": "왓뿌볼",
+        "term_type": "typo",
+        "term_weight": 0.5
+      },
+      {
+        "term": "왁뿌 볼",
+        "term_type": "typo",
+        "term_weight": 0.4
+      },
+      {
+        "term": "왁타버스",
+        "term_type": "related",
+        "term_weight": 0.9
+      },
+      {
+        "term": "이세계 아이돌",
+        "term_type": "related",
+        "term_weight": 0.9
+      },
+      {
+        "term": "굿즈",
+        "term_type": "related",
+        "term_weight": 0.8
+      },
+      {
+        "term": "MD",
+        "term_type": "related",
+        "term_weight": 0.7
+      },
+      {
+        "term": "봉제 인형",
+        "term_type": "related",
+        "term_weight": 0.7
+      },
+      {
+        "term": "팝업스토어",
+        "term_type": "related",
+        "term_weight": 0.7
+      },
+      {
+        "term": "고정점",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "키링",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "특전",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "우왁굳",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "팬치",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "판매",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "구매",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "가격",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "멤버별 굿즈",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "재판매",
+        "term_type": "related",
+        "term_weight": 0.4
+      },
+      {
+        "term": "양도",
+        "term_type": "related",
+        "term_weight": 0.4
+      },
+      {
+        "term": "징버거",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "아이네",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "릴파",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "주르르",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "고세구",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "비챤",
+        "term_type": "related",
+        "term_weight": 0.3
+      }
+    ]
+  },
+  "keyword_set_mode": null,
+  "terms": [],
+  "sources": [
+    "youtube",
+    "naver_news",
+    "naver_blog"
+  ],
+  "days": 30,
+  "limits": {
+    "youtube": 50,
+    "naver_news": 300,
+    "naver_blog": 300
+  },
+  "saved_files": {
+    "youtube": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_132651_왁뿌볼\\youtube.csv",
+    "naver_news": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_132651_왁뿌볼\\naver_news.csv",
+    "naver_blog": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_132651_왁뿌볼\\naver_blog.csv",
+    "raw_all": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_132651_왁뿌볼\\raw_all.csv"
+  },
+  "errors": {},
+  "fallback_sources": {},
+  "run_id": "run_20260614_132651_왁뿌볼",
+  "created_at": "2026-06-14T04:26:55.551369+00:00",
+  "storage_backend": "csv"
+}

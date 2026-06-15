@@ -1,0 +1,493 @@
+{
+  "run_id": "run_20260526_201548_느금마",
+  "keyword": "느금마",
+  "keyword_set": {
+    "canonical": "느금마",
+    "alias": [],
+    "typo": [],
+    "related": []
+  },
+  "keyword_set_mode": "single_term_fallback",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube",
+      "naver_news",
+      "naver_blog"
+    ],
+    "analysis_days": 30,
+    "include_related": true,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_blog",
+    "naver_news",
+    "youtube"
+  ],
+  "missing_sources": [],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다."
+  ],
+  "summary": {
+    "ts_score": 61.2,
+    "status_label": "Watch",
+    "collected_items": 50,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 100.0,
+    "reaction_score": 24.0,
+    "saturation_score": 55.2,
+    "decline_risk": 61.3
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-04-27",
+        "value": 15.0
+      },
+      {
+        "period": "2026-04-28",
+        "value": 0.0
+      },
+      {
+        "period": "2026-04-29",
+        "value": 25.0
+      },
+      {
+        "period": "2026-04-30",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-01",
+        "value": 55.0
+      },
+      {
+        "period": "2026-05-02",
+        "value": 39.3
+      },
+      {
+        "period": "2026-05-03",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-04",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-05",
+        "value": 45.0
+      },
+      {
+        "period": "2026-05-06",
+        "value": 25.0
+      },
+      {
+        "period": "2026-05-07",
+        "value": 55.0
+      },
+      {
+        "period": "2026-05-08",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-09",
+        "value": 25.0
+      },
+      {
+        "period": "2026-05-10",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-11",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-12",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-13",
+        "value": 35.0
+      },
+      {
+        "period": "2026-05-14",
+        "value": 25.0
+      },
+      {
+        "period": "2026-05-15",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-16",
+        "value": 25.0
+      },
+      {
+        "period": "2026-05-17",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-18",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-19",
+        "value": 15.0
+      },
+      {
+        "period": "2026-05-20",
+        "value": 65.3
+      },
+      {
+        "period": "2026-05-21",
+        "value": 55.0
+      },
+      {
+        "period": "2026-05-22",
+        "value": 47.2
+      },
+      {
+        "period": "2026-05-23",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-24",
+        "value": 35.0
+      },
+      {
+        "period": "2026-05-25",
+        "value": 25.0
+      },
+      {
+        "period": "2026-05-26",
+        "value": 25.0
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-04-27",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-28",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-04-29",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-30",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-01",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-02",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-03",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-04",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-05",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-06",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-07",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-08",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-09",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-10",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-11",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-12",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-13",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-14",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-15",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-16",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-17",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-18",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-19",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-20",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-21",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-05-22",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-23",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-24",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-25",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-26",
+        "value": 2,
+        "weighted_value": 2.0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "naver_blog",
+        "count": 46,
+        "ratio": 92.0
+      },
+      {
+        "source": "youtube",
+        "count": 4,
+        "ratio": 8.0
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "느금마",
+      "term_type": "canonical",
+      "count": 50,
+      "weighted_count": 50.0
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "네 엄마",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-04-27",
+      "url": "https://blog.naver.com/jkxxz/224266433189",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "<b>느금마</b>",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-04-29",
+      "url": "https://blog.naver.com/gkdms0796/224269107970",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "제 7회 오락관을 참가하다",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-04-29",
+      "url": "https://blog.naver.com/crimsonsoda/224269803575",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "내 37323자 글 4월 24일에 신고한 숨은새끼찾기",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-04-30",
+      "url": "https://blog.naver.com/apeach2319/224270475936",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "드럽게 몬생긴게 자만에 자뻑에",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-05-01",
+      "url": "https://blog.naver.com/ihopesogod0691/224271194591",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "<b>느금마</b> 관세탑 추는 소리하노",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-05-01",
+      "url": "https://blog.naver.com/ihopesogod0691/224271208958",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "니한테 하는 말은 여기 뿐이라니까",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-05-01",
+      "url": "https://blog.naver.com/ihopesogod0691/224271224293",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "<b>느금마</b> 한 대 칠려고 주먹 쥐니까 사팔뜨기 눈 되더라",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-05-01",
+      "url": "https://blog.naver.com/ihopesogod0691/224271528600",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "엔추파도스의 진짜 용례: 아르헨티나 주요 언론의 기사",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-05-01",
+      "url": "https://blog.naver.com/mudriy/224271757641",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "<b>느금마</b>",
+      "source": "naver_blog",
+      "term": "느금마",
+      "term_type": "canonical",
+      "published_at": "2026-05-02",
+      "url": "https://blog.naver.com/je3111/224272604892",
+      "views": 0,
+      "engagements": 0
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 61.2점이며 상태는 Watch입니다.",
+    "evidence": "최근 평균 Trend Index는 36.0714이고, 피크 대비 하락률은 44.7604%입니다. 가장 많은 raw item이 수집된 채널은 naver_blog입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 36.0714,
+      "previous_mean": 16.4286,
+      "peak_trend_index": 65.3,
+      "recent_slope": -40.3,
+      "decline_from_peak": 44.7604,
+      "total_mentions": 50.0,
+      "total_weighted_mentions": 50.0,
+      "total_views": 2794.0,
+      "total_engagements": 33.0,
+      "view_per_item": 55.88,
+      "engagement_per_item": 0.66,
+      "source_diversity": 0.9,
+      "weekly_rows": 5
+    },
+    "processed_rows": {
+      "term_daily": 27,
+      "keyword_daily": 30,
+      "weekly_partition": 5
+    }
+  }
+}

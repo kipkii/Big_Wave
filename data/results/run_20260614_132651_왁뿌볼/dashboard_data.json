@@ -1,0 +1,314 @@
+{
+  "run_id": "run_20260614_132651_왁뿌볼",
+  "keyword": "왁뿌볼",
+  "keyword_set": {
+    "canonical": "왁뿌볼",
+    "terms": [
+      {
+        "term": "왁뿌볼",
+        "term_type": "canonical",
+        "term_weight": 1.0
+      },
+      {
+        "term": "왁타버스 인형",
+        "term_type": "alias",
+        "term_weight": 0.8
+      },
+      {
+        "term": "이세계 아이돌 인형",
+        "term_type": "alias",
+        "term_weight": 0.8
+      },
+      {
+        "term": "왁타버스 굿즈",
+        "term_type": "alias",
+        "term_weight": 0.7
+      },
+      {
+        "term": "이세돌 굿즈",
+        "term_type": "alias",
+        "term_weight": 0.7
+      },
+      {
+        "term": "왁굳 인형",
+        "term_type": "alias",
+        "term_weight": 0.6
+      },
+      {
+        "term": "팬치 인형",
+        "term_type": "alias",
+        "term_weight": 0.6
+      },
+      {
+        "term": "왁프볼",
+        "term_type": "typo",
+        "term_weight": 0.6
+      },
+      {
+        "term": "악뿌볼",
+        "term_type": "typo",
+        "term_weight": 0.5
+      },
+      {
+        "term": "왁구볼",
+        "term_type": "typo",
+        "term_weight": 0.5
+      },
+      {
+        "term": "왓뿌볼",
+        "term_type": "typo",
+        "term_weight": 0.5
+      },
+      {
+        "term": "왁뿌 볼",
+        "term_type": "typo",
+        "term_weight": 0.4
+      },
+      {
+        "term": "왁타버스",
+        "term_type": "related",
+        "term_weight": 0.9
+      },
+      {
+        "term": "이세계 아이돌",
+        "term_type": "related",
+        "term_weight": 0.9
+      },
+      {
+        "term": "굿즈",
+        "term_type": "related",
+        "term_weight": 0.8
+      },
+      {
+        "term": "MD",
+        "term_type": "related",
+        "term_weight": 0.7
+      },
+      {
+        "term": "봉제 인형",
+        "term_type": "related",
+        "term_weight": 0.7
+      },
+      {
+        "term": "팝업스토어",
+        "term_type": "related",
+        "term_weight": 0.7
+      },
+      {
+        "term": "고정점",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "키링",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "특전",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "우왁굳",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "팬치",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "판매",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "구매",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "가격",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "멤버별 굿즈",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "재판매",
+        "term_type": "related",
+        "term_weight": 0.4
+      },
+      {
+        "term": "양도",
+        "term_type": "related",
+        "term_weight": 0.4
+      },
+      {
+        "term": "징버거",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "아이네",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "릴파",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "주르르",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "고세구",
+        "term_type": "related",
+        "term_weight": 0.3
+      },
+      {
+        "term": "비챤",
+        "term_type": "related",
+        "term_weight": 0.3
+      }
+    ]
+  },
+  "keyword_set_mode": null,
+  "last_updated": "2026-06-14",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube",
+      "naver_news",
+      "naver_blog"
+    ],
+    "analysis_days": 30,
+    "include_related": true,
+    "trend_type": "F&B",
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_blog",
+    "naver_news",
+    "youtube"
+  ],
+  "missing_sources": [],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다."
+  ],
+  "ts_score": {
+    "ts_score": 15.0,
+    "status_label": "Watch",
+    "action_insight": "👀 [관망] 아직 방향성을 확신할 뚜렷한 추세가 없습니다. 무리한 기획보다는 지표의 변화를 조금 더 지켜보는 것을 권장합니다.",
+    "growth_score": 0.0,
+    "reaction_score": 0.0,
+    "saturation_score": 0.0,
+    "decline_risk": 0.0,
+    "formula_version": "TS_v5.0_Dynamic_Regime"
+  },
+  "trend_features": {
+    "recent_mean": 0.0,
+    "previous_mean": 0.0,
+    "peak_trend_index": 0.0,
+    "decline_from_peak": 0.0,
+    "volatility": 0.0,
+    "sharpe_ratio": 0.0,
+    "short_ema": 0.0,
+    "long_ema": 0.0,
+    "ema_cross": "none",
+    "active_days": 0,
+    "weekly_rows": 0
+  },
+  "rule_report": {
+    "summary": "현재 트렌드 스코어는 15.0점, 국면은 [Watch] 단계입니다.",
+    "evidence": "최근 7일 트렌드 안정성(샤프 지수)은 0.0이며, 단기/장기 모멘텀 교차점은 '특이점 없음' 상태입니다. 가장 확산이 활발한 소스는 'youtube'입니다.",
+    "drivers": "현재 뚜렷하게 확산을 견인하는 특정 연관 키워드는 감지되지 않았습니다.",
+    "risk": "현재 심각한 하락 위험이나 급격한 꺾임세는 감지되지 않았습니다.",
+    "recommendation": "👀 [관망] 아직 방향성을 확신할 뚜렷한 추세가 없습니다. 무리한 기획보다는 지표의 변화를 조금 더 지켜보는 것을 권장합니다."
+  },
+  "trend_index_chart": [
+    {
+      "date": "2026-06-13",
+      "trend_index": 100.0
+    },
+    {
+      "date": "2026-06-14",
+      "trend_index": 0.0
+    }
+  ],
+  "daily_metrics_chart": [
+    {
+      "date": "2026-06-13",
+      "canonical_keyword": "왁뿌볼",
+      "mentions": 35,
+      "weighted_mentions": 35.0,
+      "views": 103913.0,
+      "likes": 8053.0,
+      "comments": 595.0,
+      "engagements": 8648.0,
+      "vpd": 164071.9113993605,
+      "momentum": 93742.27458883739,
+      "c_l_ratio": 7.387633474050162,
+      "source_count": 1,
+      "core_mentions": 35,
+      "related_mentions": 0
+    },
+    {
+      "date": "2026-06-14",
+      "canonical_keyword": "왁뿌볼",
+      "mentions": 15,
+      "weighted_mentions": 15.0,
+      "views": 90929.5,
+      "likes": 5192.5,
+      "comments": 454.5,
+      "engagements": 5647.0,
+      "vpd": 315395.9954666244,
+      "momentum": 84819.45367368468,
+      "c_l_ratio": 10.42334952742371,
+      "source_count": 1,
+      "core_mentions": 15,
+      "related_mentions": 0
+    }
+  ],
+  "weekly_metrics_chart": [
+    {
+      "week": "2026-06-08",
+      "content_supply": 50,
+      "weighted_supply": 50.0,
+      "views": 181859.0,
+      "comments": 909,
+      "engagements": 11294,
+      "view_per_item": 3637.18,
+      "engagement_per_item": 225.88,
+      "avg_velocity": 12615.839818664976,
+      "demand_pressure": 252.31679637329952,
+      "content_supply_z": 0.0,
+      "avg_velocity_z": 0.0,
+      "demand_pressure_z": 0.0
+    }
+  ],
+  "source_breakdown": [
+    {
+      "source": "youtube",
+      "count": 50,
+      "ratio": 100.0
+    }
+  ],
+  "term_breakdown": [
+    {
+      "term": "왁뿌볼",
+      "term_type": "canonical",
+      "count": 50,
+      "weighted_count": 50.0
+    }
+  ]
+}

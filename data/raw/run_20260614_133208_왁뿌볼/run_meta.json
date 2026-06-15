@@ -1,0 +1,37 @@
+{
+  "keyword": "왁뿌볼",
+  "keyword_set": {
+    "canonical": "왁뿌볼",
+    "terms": [
+      {
+        "term": "왁뿌볼",
+        "term_type": "canonical",
+        "term_weight": 1.0
+      }
+    ]
+  },
+  "keyword_set_mode": null,
+  "terms": [],
+  "sources": [
+    "youtube",
+    "naver_news",
+    "naver_blog"
+  ],
+  "days": 30,
+  "limits": {
+    "youtube": 50,
+    "naver_news": 300,
+    "naver_blog": 300
+  },
+  "saved_files": {
+    "youtube": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_133208_왁뿌볼\\youtube.csv",
+    "naver_news": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_133208_왁뿌볼\\naver_news.csv",
+    "naver_blog": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_133208_왁뿌볼\\naver_blog.csv",
+    "raw_all": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_133208_왁뿌볼\\raw_all.csv"
+  },
+  "errors": {},
+  "fallback_sources": {},
+  "run_id": "run_20260614_133208_왁뿌볼",
+  "created_at": "2026-06-14T04:32:12.041421+00:00",
+  "storage_backend": "csv"
+}

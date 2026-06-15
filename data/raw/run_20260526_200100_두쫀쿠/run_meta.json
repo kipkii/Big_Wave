@@ -1,0 +1,90 @@
+{
+  "keyword": "두쫀쿠",
+  "keyword_set": {
+    "canonical": "두쫀쿠",
+    "alias": [
+      "두바이 쫀득 쿠키",
+      "두바이초콜릿쿠키",
+      "두바이 초콜릿 쿠키"
+    ],
+    "typo": [
+      "두존쿠",
+      "두쫀크"
+    ],
+    "related": [
+      "카다이프",
+      "피스타치오",
+      "두바이 초콜릿"
+    ]
+  },
+  "keyword_set_mode": "preset",
+  "terms": [
+    {
+      "term": "두쫀쿠",
+      "term_type": "canonical",
+      "term_weight": 1.0
+    },
+    {
+      "term": "두바이 쫀득 쿠키",
+      "term_type": "alias",
+      "term_weight": 1.0
+    },
+    {
+      "term": "두바이초콜릿쿠키",
+      "term_type": "alias",
+      "term_weight": 1.0
+    },
+    {
+      "term": "두바이 초콜릿 쿠키",
+      "term_type": "alias",
+      "term_weight": 1.0
+    },
+    {
+      "term": "두존쿠",
+      "term_type": "typo",
+      "term_weight": 0.8
+    },
+    {
+      "term": "두쫀크",
+      "term_type": "typo",
+      "term_weight": 0.8
+    },
+    {
+      "term": "카다이프",
+      "term_type": "related",
+      "term_weight": 0.3
+    },
+    {
+      "term": "피스타치오",
+      "term_type": "related",
+      "term_weight": 0.3
+    },
+    {
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "term_weight": 0.3
+    }
+  ],
+  "sources": [
+    "youtube",
+    "naver_news",
+    "naver_blog"
+  ],
+  "days": 90,
+  "limits": {
+    "youtube": 250,
+    "naver_news": 100,
+    "naver_blog": 100
+  },
+  "saved_files": {
+    "naver_news": "C:\\Users\\USER-PC\\Desktop\\neww\\bigwave_mvp_v2\\data\\raw\\run_20260526_200100_두쫀쿠\\naver_news.csv",
+    "naver_blog": "C:\\Users\\USER-PC\\Desktop\\neww\\bigwave_mvp_v2\\data\\raw\\run_20260526_200100_두쫀쿠\\naver_blog.csv",
+    "raw_all": "C:\\Users\\USER-PC\\Desktop\\neww\\bigwave_mvp_v2\\data\\raw\\run_20260526_200100_두쫀쿠\\raw_all.csv"
+  },
+  "errors": {
+    "youtube": "All YouTube API keys failed."
+  },
+  "run_id": "run_20260526_200100_두쫀쿠",
+  "created_at": "2026-05-26T11:01:14.279899+00:00",
+  "storage_backend": "csv"
+}

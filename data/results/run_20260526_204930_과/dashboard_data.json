@@ -1,0 +1,259 @@
+{
+  "run_id": "run_20260526_204930_과",
+  "keyword": "과",
+  "keyword_set": {
+    "canonical": "과",
+    "alias": [],
+    "typo": [],
+    "related": []
+  },
+  "keyword_set_mode": "single_term_fallback",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube",
+      "naver_news",
+      "naver_blog"
+    ],
+    "analysis_days": 30,
+    "include_related": true,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_blog",
+    "naver_news"
+  ],
+  "missing_sources": [
+    "youtube"
+  ],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다.",
+    "선택한 source 중 현재 run에 없는 채널이 있습니다: youtube. 해당 채널을 보려면 재수집이 필요합니다."
+  ],
+  "summary": {
+    "ts_score": 60.6,
+    "status_label": "Watch",
+    "collected_items": 596,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 70.0,
+    "reaction_score": 0.0,
+    "saturation_score": 100.0,
+    "decline_risk": 0.0
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-05-26",
+        "value": 56.7
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-05-26",
+        "value": 596.0,
+        "weighted_value": 596.0,
+        "raw_value": 596,
+        "raw_weighted_value": 596.0
+      }
+    ],
+    "weekly_partition_series": [
+      {
+        "period": "2026-05-25",
+        "content_supply": 596.0,
+        "weighted_supply": 596.0,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      }
+    ],
+    "velocity_z_series": [
+      {
+        "period": "2026-05-25",
+        "supply_z": 0.0,
+        "velocity_z": 0.0,
+        "pressure_z": 0.0,
+        "threshold": 1.5,
+        "baseline": 0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "naver_news",
+        "count": 300,
+        "ratio": 50.3
+      },
+      {
+        "source": "naver_blog",
+        "count": 296,
+        "ratio": 49.7
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "과",
+      "term_type": "canonical",
+      "count": 596,
+      "weighted_count": 596.0
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "충남교통연수원 운전자 보수교육 대상자 조회 온라인 신청... ",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/fairybong93/224297141365",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "관련주·우주 ETF 총정리, 6월 12일 역대 최대 IPO",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/okithekey/224297198666",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "소중한 이들을 떠올리고 싶은 이들에게",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/jjun427/224297198943",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "한주라이트메탈 주가 전망 분석",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/aselstan/224297197856",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "[마음이 크는 그림책] 앤서니 브라운의 〈돼지책〉으로 나눈... ",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/box4019/224297198249",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "처방받은 아모잘탄정 용량이 달라졌다면? 5/50mg부터 10... ",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/knowlog-/224297198196",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "농축우라늄, 다시 무대 위로 — 산업 개관<b>과</b> 글로벌·국내 투자... ",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/baren64/224297197485",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "“치매는 늦추지 못하는 병”이라는 상식이 무너졌다",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/miso1c8o9/224297198827",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "버크셔 해서웨이",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/tilltop/224297198037",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "바람의 검심 (검은 흉기, 검술은 살인술! 아무리 잘 포장하고... ",
+      "source": "naver_blog",
+      "term": "과",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/jichuli/224297197673",
+      "views": 0,
+      "engagements": 0
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 60.6점이며 상태는 Watch입니다.",
+    "evidence": "최근 평균 Trend Index는 56.7이고, 피크 대비 하락률은 0.0%입니다. 가장 많은 raw item이 수집된 채널은 naver_news입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 56.7,
+      "previous_mean": 0.0,
+      "peak_trend_index": 56.7,
+      "recent_slope": 0.0,
+      "decline_from_peak": 0.0,
+      "total_mentions": 596.0,
+      "total_weighted_mentions": 596.0,
+      "total_views": 0.0,
+      "total_engagements": 0.0,
+      "view_per_item": 0.0,
+      "engagement_per_item": 0.0,
+      "source_diversity": 2.0,
+      "active_days": 1,
+      "coverage_ratio": 1.0,
+      "weekly_rows": 1
+    },
+    "processed_rows": {
+      "term_daily": 2,
+      "keyword_daily": 1,
+      "weekly_partition": 1
+    }
+  }
+}

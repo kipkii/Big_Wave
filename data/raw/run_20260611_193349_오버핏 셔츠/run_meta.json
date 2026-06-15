@@ -1,0 +1,39 @@
+{
+  "keyword": "오버핏 셔츠",
+  "keyword_set": {
+    "canonical": "오버핏 셔츠",
+    "alias": [],
+    "typo": [],
+    "related": []
+  },
+  "keyword_set_mode": "single_term_fallback",
+  "terms": [
+    {
+      "term": "오버핏 셔츠",
+      "term_type": "canonical",
+      "term_weight": 1.0
+    }
+  ],
+  "sources": [
+    "youtube",
+    "naver_news",
+    "naver_blog"
+  ],
+  "days": 90,
+  "limits": {
+    "youtube": 50,
+    "naver_news": 50,
+    "naver_blog": 50
+  },
+  "saved_files": {
+    "youtube": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260611_193349_오버핏 셔츠\\youtube.csv",
+    "naver_news": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260611_193349_오버핏 셔츠\\naver_news.csv",
+    "naver_blog": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260611_193349_오버핏 셔츠\\naver_blog.csv",
+    "raw_all": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260611_193349_오버핏 셔츠\\raw_all.csv"
+  },
+  "errors": {},
+  "fallback_sources": {},
+  "run_id": "run_20260611_193349_오버핏 셔츠",
+  "created_at": "2026-06-11T10:33:51.420988+00:00",
+  "storage_backend": "csv"
+}

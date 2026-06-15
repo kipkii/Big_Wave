@@ -1,0 +1,674 @@
+{
+  "run_id": "run_20260526_213245_우베",
+  "keyword": "우베",
+  "keyword_set": {
+    "canonical": "우베",
+    "alias": [
+      "ube",
+      "우베 디저트",
+      "우베맛"
+    ],
+    "typo": [
+      "우배"
+    ],
+    "related": [
+      "보라색 디저트",
+      "필리핀 디저트",
+      "우베 케이크"
+    ]
+  },
+  "keyword_set_mode": "preset",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube",
+      "naver_news",
+      "naver_blog"
+    ],
+    "analysis_days": 30,
+    "include_related": true,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_blog",
+    "naver_news",
+    "youtube"
+  ],
+  "missing_sources": [],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다."
+  ],
+  "summary": {
+    "ts_score": 74.4,
+    "status_label": "Rising",
+    "collected_items": 1520,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 95.6,
+    "reaction_score": 39.0,
+    "saturation_score": 76.9,
+    "decline_risk": 16.2
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-04-29",
+        "value": 9.7
+      },
+      {
+        "period": "2026-04-30",
+        "value": 14.3
+      },
+      {
+        "period": "2026-05-01",
+        "value": 12.8
+      },
+      {
+        "period": "2026-05-02",
+        "value": 14.1
+      },
+      {
+        "period": "2026-05-03",
+        "value": 12.4
+      },
+      {
+        "period": "2026-05-04",
+        "value": 16.0
+      },
+      {
+        "period": "2026-05-05",
+        "value": 16.0
+      },
+      {
+        "period": "2026-05-06",
+        "value": 16.0
+      },
+      {
+        "period": "2026-05-07",
+        "value": 14.7
+      },
+      {
+        "period": "2026-05-08",
+        "value": 23.4
+      },
+      {
+        "period": "2026-05-09",
+        "value": 23.4
+      },
+      {
+        "period": "2026-05-10",
+        "value": 37.3
+      },
+      {
+        "period": "2026-05-11",
+        "value": 44.9
+      },
+      {
+        "period": "2026-05-12",
+        "value": 47.3
+      },
+      {
+        "period": "2026-05-13",
+        "value": 32.4
+      },
+      {
+        "period": "2026-05-14",
+        "value": 27.5
+      },
+      {
+        "period": "2026-05-15",
+        "value": 33.6
+      },
+      {
+        "period": "2026-05-16",
+        "value": 34.5
+      },
+      {
+        "period": "2026-05-17",
+        "value": 29.4
+      },
+      {
+        "period": "2026-05-18",
+        "value": 21.0
+      },
+      {
+        "period": "2026-05-19",
+        "value": 44.4
+      },
+      {
+        "period": "2026-05-20",
+        "value": 51.3
+      },
+      {
+        "period": "2026-05-21",
+        "value": 63.9
+      },
+      {
+        "period": "2026-05-22",
+        "value": 51.7
+      },
+      {
+        "period": "2026-05-23",
+        "value": 50.8
+      },
+      {
+        "period": "2026-05-24",
+        "value": 60.9
+      },
+      {
+        "period": "2026-05-25",
+        "value": 68.2
+      },
+      {
+        "period": "2026-05-26",
+        "value": 79.1
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-04-29",
+        "value": 1.0,
+        "weighted_value": 0.8,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-04-30",
+        "value": 2.5,
+        "weighted_value": 2.0,
+        "raw_value": 4,
+        "raw_weighted_value": 3.2
+      },
+      {
+        "period": "2026-05-01",
+        "value": 2.0,
+        "weighted_value": 1.6,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-05-02",
+        "value": 2.3,
+        "weighted_value": 1.87,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-03",
+        "value": 1.7,
+        "weighted_value": 1.33,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-04",
+        "value": 3.0,
+        "weighted_value": 2.4,
+        "raw_value": 5,
+        "raw_weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-05",
+        "value": 3.0,
+        "weighted_value": 2.4,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-06",
+        "value": 3.0,
+        "weighted_value": 2.4,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-07",
+        "value": 2.3,
+        "weighted_value": 1.87,
+        "raw_value": 3,
+        "raw_weighted_value": 2.4
+      },
+      {
+        "period": "2026-05-08",
+        "value": 2.0,
+        "weighted_value": 1.6,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-05-09",
+        "value": 2.0,
+        "weighted_value": 1.6,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-10",
+        "value": 2.7,
+        "weighted_value": 2.13,
+        "raw_value": 5,
+        "raw_weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-11",
+        "value": 4.3,
+        "weighted_value": 3.47,
+        "raw_value": 6,
+        "raw_weighted_value": 4.8
+      },
+      {
+        "period": "2026-05-12",
+        "value": 5.3,
+        "weighted_value": 4.27,
+        "raw_value": 5,
+        "raw_weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-13",
+        "value": 4.3,
+        "weighted_value": 3.47,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-14",
+        "value": 4.3,
+        "weighted_value": 3.47,
+        "raw_value": 6,
+        "raw_weighted_value": 4.8
+      },
+      {
+        "period": "2026-05-15",
+        "value": 4.0,
+        "weighted_value": 3.2,
+        "raw_value": 4,
+        "raw_weighted_value": 3.2
+      },
+      {
+        "period": "2026-05-16",
+        "value": 4.3,
+        "weighted_value": 3.47,
+        "raw_value": 3,
+        "raw_weighted_value": 2.4
+      },
+      {
+        "period": "2026-05-17",
+        "value": 3.3,
+        "weighted_value": 2.67,
+        "raw_value": 3,
+        "raw_weighted_value": 2.4
+      },
+      {
+        "period": "2026-05-18",
+        "value": 2.7,
+        "weighted_value": 2.13,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-19",
+        "value": 24.7,
+        "weighted_value": 23.87,
+        "raw_value": 69,
+        "raw_weighted_value": 67.6
+      },
+      {
+        "period": "2026-05-20",
+        "value": 58.3,
+        "weighted_value": 57.4,
+        "raw_value": 104,
+        "raw_weighted_value": 103.0
+      },
+      {
+        "period": "2026-05-21",
+        "value": 86.0,
+        "weighted_value": 85.0,
+        "raw_value": 85,
+        "raw_weighted_value": 84.4
+      },
+      {
+        "period": "2026-05-22",
+        "value": 95.3,
+        "weighted_value": 87.33,
+        "raw_value": 97,
+        "raw_weighted_value": 74.6
+      },
+      {
+        "period": "2026-05-23",
+        "value": 96.0,
+        "weighted_value": 79.03,
+        "raw_value": 106,
+        "raw_weighted_value": 78.1
+      },
+      {
+        "period": "2026-05-24",
+        "value": 105.7,
+        "weighted_value": 74.07,
+        "raw_value": 114,
+        "raw_weighted_value": 69.5
+      },
+      {
+        "period": "2026-05-25",
+        "value": 185.7,
+        "weighted_value": 106.8,
+        "raw_value": 337,
+        "raw_weighted_value": 172.8
+      },
+      {
+        "period": "2026-05-26",
+        "value": 332.7,
+        "weighted_value": 236.43,
+        "raw_value": 547,
+        "raw_weighted_value": 467.0
+      }
+    ],
+    "weekly_partition_series": [
+      {
+        "period": "2026-04-27",
+        "content_supply": 10.0,
+        "weighted_supply": 8.0,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      },
+      {
+        "period": "2026-05-04",
+        "content_supply": 20.0,
+        "weighted_supply": 16.0,
+        "views": 102040.0,
+        "view_per_item": 5102.0,
+        "avg_velocity": 311.1,
+        "demand_pressure": 15.6
+      },
+      {
+        "period": "2026-05-11",
+        "content_supply": 29.0,
+        "weighted_supply": 23.2,
+        "views": 193940.0,
+        "view_per_item": 6687.6,
+        "avg_velocity": 448.8,
+        "demand_pressure": 15.5
+      },
+      {
+        "period": "2026-05-18",
+        "content_supply": 577.0,
+        "weighted_supply": 478.8,
+        "views": 115791.0,
+        "view_per_item": 200.7,
+        "avg_velocity": 48.9,
+        "demand_pressure": 0.1
+      },
+      {
+        "period": "2026-05-25",
+        "content_supply": 884.0,
+        "weighted_supply": 639.8,
+        "views": 12610.0,
+        "view_per_item": 14.3,
+        "avg_velocity": 14.3,
+        "demand_pressure": 0.0
+      }
+    ],
+    "velocity_z_series": [
+      {
+        "period": "2026-04-27",
+        "supply_z": -0.73,
+        "velocity_z": -0.81,
+        "pressure_z": -0.73,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-04",
+        "supply_z": -0.7,
+        "velocity_z": 0.72,
+        "pressure_z": 1.1,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-11",
+        "supply_z": -0.68,
+        "velocity_z": 1.4,
+        "pressure_z": 1.09,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-18",
+        "supply_z": 0.68,
+        "velocity_z": -0.57,
+        "pressure_z": -0.72,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-25",
+        "supply_z": 1.43,
+        "velocity_z": -0.74,
+        "pressure_z": -0.73,
+        "threshold": 1.5,
+        "baseline": 0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "naver_blog",
+        "count": 1476,
+        "ratio": 97.1
+      },
+      {
+        "source": "youtube",
+        "count": 44,
+        "ratio": 2.9
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "우베",
+      "term_type": "canonical",
+      "count": 310,
+      "weighted_count": 310.0
+    },
+    {
+      "term": "ube",
+      "term_type": "alias",
+      "count": 288,
+      "weighted_count": 288.0
+    },
+    {
+      "term": "우베맛",
+      "term_type": "alias",
+      "count": 228,
+      "weighted_count": 228.0
+    },
+    {
+      "term": "우베 디저트",
+      "term_type": "alias",
+      "count": 123,
+      "weighted_count": 123.0
+    },
+    {
+      "term": "우배",
+      "term_type": "typo",
+      "count": 91,
+      "weighted_count": 72.8
+    },
+    {
+      "term": "보라색 디저트",
+      "term_type": "related",
+      "count": 210,
+      "weighted_count": 63.0
+    },
+    {
+      "term": "필리핀 디저트",
+      "term_type": "related",
+      "count": 169,
+      "weighted_count": 50.7
+    },
+    {
+      "term": "우베 케이크",
+      "term_type": "related",
+      "count": 101,
+      "weighted_count": 30.3
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "정자동 막국수 맛집 정자역 분당 동치미 막국수 메밀정식 수육... ",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-04-29",
+      "url": "https://blog.naver.com/hanseulll_/224268527444",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "월곡답가 심층 고찰 우국충절의 미학과 자연 귀의의 본질적 해석",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-04-30",
+      "url": "https://blog.naver.com/ksmo0913/224270561292",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "[우베유행탑승] 투썸 떠먹는 우베 아박 내돈내산 솔직후기",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-04-30",
+      "url": "https://blog.naver.com/sss26116/224270365143",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "사각싱크볼 교체 시공 사례 - 코리나 세레노 980 엠보... ",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-04-30",
+      "url": "https://blog.naver.com/thema/224270175344",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "매출 종착지 우베 디저트 &amp; 음료 클래스 후기",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-04-30",
+      "url": "https://blog.naver.com/mycellplus/224270498990",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "Just stop your crying, it's a sign of the times.",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-01",
+      "url": "https://blog.naver.com/snakeing/224271039876",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "4월 모음 zip",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-02",
+      "url": "https://blog.naver.com/jjin_nok/224272837463",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "주택관리사 17회 시설개론",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-02",
+      "url": "https://blog.naver.com/hajime011/224272306032",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "2240. 만엽집 3898번가~3899번가 해석",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-03",
+      "url": "https://blog.naver.com/prime1957/224273611324",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "나는 감정없는 싸이코라 그런가 이런거보면 미동도 안함.... ",
+      "source": "naver_blog",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-03",
+      "url": "https://blog.naver.com/ddupal/224273649806",
+      "views": 0,
+      "engagements": 0
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 74.4점이며 상태는 Rising입니다.",
+    "evidence": "최근 평균 Trend Index는 60.8429이고, 피크 대비 하락률은 23.0811%입니다. 가장 많은 raw item이 수집된 채널은 naver_blog입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 60.8429,
+      "previous_mean": 31.8286,
+      "peak_trend_index": 79.1,
+      "recent_slope": 27.8,
+      "decline_from_peak": 23.0811,
+      "total_mentions": 1520.0,
+      "total_weighted_mentions": 1165.8,
+      "total_views": 424381.0,
+      "total_engagements": 6494.0,
+      "view_per_item": 279.198,
+      "engagement_per_item": 4.2724,
+      "source_diversity": 1.3214,
+      "active_days": 28,
+      "coverage_ratio": 1.0,
+      "weekly_rows": 5
+    },
+    "processed_rows": {
+      "term_daily": 69,
+      "keyword_daily": 28,
+      "weekly_partition": 5
+    }
+  }
+}

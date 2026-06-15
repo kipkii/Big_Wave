@@ -1,0 +1,10 @@
+{
+  "ts_score": 15.0,
+  "status_label": "Watch",
+  "action_insight": "👀 [관망] 아직 방향성을 확신할 뚜렷한 추세가 없습니다. 무리한 기획보다는 지표의 변화를 조금 더 지켜보는 것을 권장합니다.",
+  "growth_score": 0.0,
+  "reaction_score": 0.0,
+  "saturation_score": 0.0,
+  "decline_risk": 0.0,
+  "formula_version": "TS_v5.0_Dynamic_Regime"
+}

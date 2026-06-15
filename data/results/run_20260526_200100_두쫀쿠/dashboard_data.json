@@ -1,0 +1,627 @@
+{
+  "run_id": "run_20260526_200100_두쫀쿠",
+  "keyword": "두쫀쿠",
+  "keyword_set": {
+    "canonical": "두쫀쿠",
+    "alias": [
+      "두바이 쫀득 쿠키",
+      "두바이초콜릿쿠키",
+      "두바이 초콜릿 쿠키"
+    ],
+    "typo": [
+      "두존쿠",
+      "두쫀크"
+    ],
+    "related": [
+      "카다이프",
+      "피스타치오",
+      "두바이 초콜릿"
+    ]
+  },
+  "keyword_set_mode": "preset",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube",
+      "naver_news",
+      "naver_blog"
+    ],
+    "analysis_days": 90,
+    "include_related": true,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_blog",
+    "naver_news"
+  ],
+  "missing_sources": [
+    "youtube"
+  ],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다.",
+    "선택한 source 중 현재 run에 없는 채널이 있습니다: youtube. 해당 채널을 보려면 재수집이 필요합니다."
+  ],
+  "summary": {
+    "ts_score": 54.0,
+    "status_label": "Watch",
+    "collected_items": 1002,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 60.9,
+    "reaction_score": 0.0,
+    "saturation_score": 89.6,
+    "decline_risk": 7.3
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-05-03",
+        "value": 16.3
+      },
+      {
+        "period": "2026-05-04",
+        "value": 11.2
+      },
+      {
+        "period": "2026-05-05",
+        "value": 11.6
+      },
+      {
+        "period": "2026-05-06",
+        "value": 9.0
+      },
+      {
+        "period": "2026-05-07",
+        "value": 16.2
+      },
+      {
+        "period": "2026-05-08",
+        "value": 21.5
+      },
+      {
+        "period": "2026-05-09",
+        "value": 27.9
+      },
+      {
+        "period": "2026-05-10",
+        "value": 28.6
+      },
+      {
+        "period": "2026-05-11",
+        "value": 32.8
+      },
+      {
+        "period": "2026-05-12",
+        "value": 36.8
+      },
+      {
+        "period": "2026-05-13",
+        "value": 37.7
+      },
+      {
+        "period": "2026-05-14",
+        "value": 34.4
+      },
+      {
+        "period": "2026-05-15",
+        "value": 31.7
+      },
+      {
+        "period": "2026-05-16",
+        "value": 31.3
+      },
+      {
+        "period": "2026-05-17",
+        "value": 31.7
+      },
+      {
+        "period": "2026-05-18",
+        "value": 32.1
+      },
+      {
+        "period": "2026-05-19",
+        "value": 37.0
+      },
+      {
+        "period": "2026-05-20",
+        "value": 43.7
+      },
+      {
+        "period": "2026-05-21",
+        "value": 45.8
+      },
+      {
+        "period": "2026-05-22",
+        "value": 44.8
+      },
+      {
+        "period": "2026-05-23",
+        "value": 37.3
+      },
+      {
+        "period": "2026-05-24",
+        "value": 33.4
+      },
+      {
+        "period": "2026-05-25",
+        "value": 36.6
+      },
+      {
+        "period": "2026-05-26",
+        "value": 45.5
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-05-03",
+        "value": 3.0,
+        "weighted_value": 2.3,
+        "raw_value": 3,
+        "raw_weighted_value": 2.3
+      },
+      {
+        "period": "2026-05-04",
+        "value": 2.0,
+        "weighted_value": 1.3,
+        "raw_value": 1,
+        "raw_weighted_value": 0.3
+      },
+      {
+        "period": "2026-05-05",
+        "value": 2.0,
+        "weighted_value": 1.3,
+        "raw_value": 2,
+        "raw_weighted_value": 1.3
+      },
+      {
+        "period": "2026-05-06",
+        "value": 1.7,
+        "weighted_value": 0.73,
+        "raw_value": 2,
+        "raw_weighted_value": 0.6
+      },
+      {
+        "period": "2026-05-07",
+        "value": 4.7,
+        "weighted_value": 3.5,
+        "raw_value": 10,
+        "raw_weighted_value": 8.6
+      },
+      {
+        "period": "2026-05-08",
+        "value": 7.0,
+        "weighted_value": 6.07,
+        "raw_value": 9,
+        "raw_weighted_value": 9.0
+      },
+      {
+        "period": "2026-05-09",
+        "value": 9.3,
+        "weighted_value": 8.63,
+        "raw_value": 9,
+        "raw_weighted_value": 8.3
+      },
+      {
+        "period": "2026-05-10",
+        "value": 11.0,
+        "weighted_value": 9.37,
+        "raw_value": 15,
+        "raw_weighted_value": 10.8
+      },
+      {
+        "period": "2026-05-11",
+        "value": 20.7,
+        "weighted_value": 13.83,
+        "raw_value": 38,
+        "raw_weighted_value": 22.4
+      },
+      {
+        "period": "2026-05-12",
+        "value": 30.3,
+        "weighted_value": 17.63,
+        "raw_value": 38,
+        "raw_weighted_value": 19.7
+      },
+      {
+        "period": "2026-05-13",
+        "value": 29.3,
+        "weighted_value": 17.4,
+        "raw_value": 12,
+        "raw_weighted_value": 10.1
+      },
+      {
+        "period": "2026-05-14",
+        "value": 20.7,
+        "weighted_value": 12.73,
+        "raw_value": 12,
+        "raw_weighted_value": 8.4
+      },
+      {
+        "period": "2026-05-15",
+        "value": 12.0,
+        "weighted_value": 9.07,
+        "raw_value": 12,
+        "raw_weighted_value": 8.7
+      },
+      {
+        "period": "2026-05-16",
+        "value": 11.3,
+        "weighted_value": 8.7,
+        "raw_value": 10,
+        "raw_weighted_value": 9.0
+      },
+      {
+        "period": "2026-05-17",
+        "value": 11.7,
+        "weighted_value": 9.13,
+        "raw_value": 13,
+        "raw_weighted_value": 9.7
+      },
+      {
+        "period": "2026-05-18",
+        "value": 14.0,
+        "weighted_value": 9.5,
+        "raw_value": 19,
+        "raw_weighted_value": 9.8
+      },
+      {
+        "period": "2026-05-19",
+        "value": 27.3,
+        "weighted_value": 18.9,
+        "raw_value": 50,
+        "raw_weighted_value": 37.2
+      },
+      {
+        "period": "2026-05-20",
+        "value": 53.0,
+        "weighted_value": 38.43,
+        "raw_value": 90,
+        "raw_weighted_value": 68.3
+      },
+      {
+        "period": "2026-05-21",
+        "value": 54.3,
+        "weighted_value": 41.17,
+        "raw_value": 23,
+        "raw_weighted_value": 18.0
+      },
+      {
+        "period": "2026-05-22",
+        "value": 64.0,
+        "weighted_value": 38.2,
+        "raw_value": 79,
+        "raw_weighted_value": 28.3
+      },
+      {
+        "period": "2026-05-23",
+        "value": 37.7,
+        "weighted_value": 18.0,
+        "raw_value": 11,
+        "raw_weighted_value": 7.7
+      },
+      {
+        "period": "2026-05-24",
+        "value": 32.7,
+        "weighted_value": 13.83,
+        "raw_value": 8,
+        "raw_weighted_value": 5.5
+      },
+      {
+        "period": "2026-05-25",
+        "value": 31.0,
+        "weighted_value": 27.5,
+        "raw_value": 74,
+        "raw_weighted_value": 69.3
+      },
+      {
+        "period": "2026-05-26",
+        "value": 181.3,
+        "weighted_value": 126.4,
+        "raw_value": 462,
+        "raw_weighted_value": 304.4
+      }
+    ],
+    "weekly_partition_series": [
+      {
+        "period": "2026-04-27",
+        "content_supply": 3.0,
+        "weighted_supply": 2.3,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      },
+      {
+        "period": "2026-05-04",
+        "content_supply": 48.0,
+        "weighted_supply": 38.9,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      },
+      {
+        "period": "2026-05-11",
+        "content_supply": 135.0,
+        "weighted_supply": 88.0,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      },
+      {
+        "period": "2026-05-18",
+        "content_supply": 280.0,
+        "weighted_supply": 174.8,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      },
+      {
+        "period": "2026-05-25",
+        "content_supply": 536.0,
+        "weighted_supply": 373.7,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      }
+    ],
+    "velocity_z_series": [
+      {
+        "period": "2026-04-27",
+        "supply_z": -0.92,
+        "velocity_z": 0.0,
+        "pressure_z": 0.0,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-04",
+        "supply_z": -0.71,
+        "velocity_z": 0.0,
+        "pressure_z": 0.0,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-11",
+        "supply_z": -0.3,
+        "velocity_z": 0.0,
+        "pressure_z": 0.0,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-18",
+        "supply_z": 0.37,
+        "velocity_z": 0.0,
+        "pressure_z": 0.0,
+        "threshold": 1.5,
+        "baseline": 0
+      },
+      {
+        "period": "2026-05-25",
+        "supply_z": 1.56,
+        "velocity_z": 0.0,
+        "pressure_z": 0.0,
+        "threshold": 1.5,
+        "baseline": 0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "naver_blog",
+        "count": 575,
+        "ratio": 57.4
+      },
+      {
+        "source": "naver_news",
+        "count": 427,
+        "ratio": 42.6
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "두쫀쿠",
+      "term_type": "canonical",
+      "count": 200,
+      "weighted_count": 200.0
+    },
+    {
+      "term": "두바이 쫀득 쿠키",
+      "term_type": "alias",
+      "count": 178,
+      "weighted_count": 178.0
+    },
+    {
+      "term": "두바이초콜릿쿠키",
+      "term_type": "alias",
+      "count": 90,
+      "weighted_count": 90.0
+    },
+    {
+      "term": "두존쿠",
+      "term_type": "typo",
+      "count": 99,
+      "weighted_count": 79.2
+    },
+    {
+      "term": "피스타치오",
+      "term_type": "related",
+      "count": 179,
+      "weighted_count": 53.7
+    },
+    {
+      "term": "카다이프",
+      "term_type": "related",
+      "count": 169,
+      "weighted_count": 50.7
+    },
+    {
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "count": 87,
+      "weighted_count": 26.1
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "“프리미엄만 고집하면 쉽지 않아”…두쫀쿠·버터떡·컵빙수로 판 바꾼...",
+      "source": "naver_news",
+      "term": "두바이초콜릿쿠키",
+      "term_type": "alias",
+      "published_at": "2026-05-03",
+      "url": "https://n.news.naver.com/mnews/article/009/0005674653?sid=103",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "[이슈in] &quot;보라색이면 다 우베야?&quot;… 빙그레 메로나 먼저였다, 스타벅스...",
+      "source": "naver_news",
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "published_at": "2026-05-03",
+      "url": "https://www.newscj.com/news/articleView.html?idxno=3397908",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "[반짝유행시대]③&quot;딸기크림과 카다이프…트렌드 확장성 주목&quot;",
+      "source": "naver_news",
+      "term": "두바이초콜릿쿠키",
+      "term_type": "alias",
+      "published_at": "2026-05-03",
+      "url": "https://n.news.naver.com/mnews/article/277/0005757955?sid=103",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "[강남視角] 에루샤와 다이소",
+      "source": "naver_news",
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "published_at": "2026-05-04",
+      "url": "https://n.news.naver.com/mnews/article/014/0005517054?sid=110",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "대화형 커머스서 제품 개발까지···AI가 식품·유통업계 확 바꾼다",
+      "source": "naver_news",
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "published_at": "2026-05-05",
+      "url": "https://www.seoulfn.com/news/articleView.html?idxno=627793",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "눈과 귀로 맛보다… 디저트, 콘텐츠 홍수 속 유흥거리로",
+      "source": "naver_news",
+      "term": "두바이초콜릿쿠키",
+      "term_type": "alias",
+      "published_at": "2026-05-05",
+      "url": "https://n.news.naver.com/mnews/article/020/0003717380?sid=101",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "K-카페가 대세…이제 해외서 따라 한다 [식탐]",
+      "source": "naver_news",
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "published_at": "2026-05-06",
+      "url": "https://n.news.naver.com/mnews/article/016/0002639727?sid=101",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "말차·<b>두바이</b> 가고 ‘우베’ 왔다…식품업계 보랏빛 재료에 주목",
+      "source": "naver_news",
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "published_at": "2026-05-06",
+      "url": "https://n.news.naver.com/mnews/article/082/0001379439?sid=101",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "버터떡향 참이슬, 15.7도 저도주…소주가 젊어진다",
+      "source": "naver_news",
+      "term": "두바이초콜릿쿠키",
+      "term_type": "alias",
+      "published_at": "2026-05-07",
+      "url": "https://n.news.naver.com/mnews/article/008/0005354105?sid=101",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "MZ픽 '우베'가 뭐길래… 보라색으로 물든 식품업계",
+      "source": "naver_news",
+      "term": "두바이 초콜릿",
+      "term_type": "related",
+      "published_at": "2026-05-07",
+      "url": "http://www.the-biz.co.kr/news/articleView.html?idxno=720087",
+      "views": 0,
+      "engagements": 0
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 54.0점이며 상태는 Watch입니다.",
+    "evidence": "최근 평균 Trend Index는 41.0143이고, 피크 대비 하락률은 10.4492%입니다. 가장 많은 raw item이 수집된 채널은 naver_blog입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 41.0143,
+      "previous_mean": 33.7,
+      "peak_trend_index": 45.8,
+      "recent_slope": 1.8,
+      "decline_from_peak": 10.4492,
+      "total_mentions": 1002.0,
+      "total_weighted_mentions": 677.7,
+      "total_views": 0.0,
+      "total_engagements": 0.0,
+      "view_per_item": 0.0,
+      "engagement_per_item": 0.0,
+      "source_diversity": 1.6667,
+      "active_days": 24,
+      "coverage_ratio": 1.0,
+      "weekly_rows": 5
+    },
+    "processed_rows": {
+      "term_daily": 95,
+      "keyword_daily": 24,
+      "weekly_partition": 5
+    }
+  }
+}

@@ -1,0 +1,1033 @@
+{
+  "run_id": "run_20260526_201704_샤브올데이",
+  "keyword": "샤브올데이",
+  "keyword_set": {
+    "canonical": "샤브올데이",
+    "alias": [],
+    "typo": [],
+    "related": []
+  },
+  "keyword_set_mode": "single_term_fallback",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube",
+      "naver_news",
+      "naver_blog"
+    ],
+    "analysis_days": 90,
+    "include_related": true,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_blog",
+    "naver_news",
+    "youtube"
+  ],
+  "missing_sources": [],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다."
+  ],
+  "summary": {
+    "ts_score": 64.8,
+    "status_label": "Watch",
+    "collected_items": 347,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 65.2,
+    "reaction_score": 84.4,
+    "saturation_score": 40.8,
+    "decline_risk": 41.4
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-02-26",
+        "value": 45.2
+      },
+      {
+        "period": "2026-02-27",
+        "value": 37.5
+      },
+      {
+        "period": "2026-02-28",
+        "value": 52.8
+      },
+      {
+        "period": "2026-03-01",
+        "value": 34.5
+      },
+      {
+        "period": "2026-03-02",
+        "value": 33.1
+      },
+      {
+        "period": "2026-03-03",
+        "value": 49.3
+      },
+      {
+        "period": "2026-03-04",
+        "value": 42.9
+      },
+      {
+        "period": "2026-03-05",
+        "value": 36.9
+      },
+      {
+        "period": "2026-03-06",
+        "value": 41.7
+      },
+      {
+        "period": "2026-03-07",
+        "value": 25.7
+      },
+      {
+        "period": "2026-03-08",
+        "value": 30.4
+      },
+      {
+        "period": "2026-03-09",
+        "value": 42.7
+      },
+      {
+        "period": "2026-03-10",
+        "value": 36.9
+      },
+      {
+        "period": "2026-03-11",
+        "value": 32.0
+      },
+      {
+        "period": "2026-03-12",
+        "value": 40.3
+      },
+      {
+        "period": "2026-03-13",
+        "value": 43.7
+      },
+      {
+        "period": "2026-03-14",
+        "value": 42.3
+      },
+      {
+        "period": "2026-03-15",
+        "value": 31.7
+      },
+      {
+        "period": "2026-03-16",
+        "value": 42.4
+      },
+      {
+        "period": "2026-03-17",
+        "value": 42.9
+      },
+      {
+        "period": "2026-03-18",
+        "value": 42.7
+      },
+      {
+        "period": "2026-03-19",
+        "value": 36.3
+      },
+      {
+        "period": "2026-03-20",
+        "value": 40.0
+      },
+      {
+        "period": "2026-03-21",
+        "value": 35.7
+      },
+      {
+        "period": "2026-03-22",
+        "value": 30.2
+      },
+      {
+        "period": "2026-03-23",
+        "value": 46.6
+      },
+      {
+        "period": "2026-03-24",
+        "value": 42.0
+      },
+      {
+        "period": "2026-03-25",
+        "value": 43.6
+      },
+      {
+        "period": "2026-03-26",
+        "value": 46.6
+      },
+      {
+        "period": "2026-03-27",
+        "value": 47.8
+      },
+      {
+        "period": "2026-03-28",
+        "value": 33.4
+      },
+      {
+        "period": "2026-03-29",
+        "value": 39.9
+      },
+      {
+        "period": "2026-03-30",
+        "value": 0.0
+      },
+      {
+        "period": "2026-03-31",
+        "value": 30.7
+      },
+      {
+        "period": "2026-04-01",
+        "value": 42.9
+      },
+      {
+        "period": "2026-04-02",
+        "value": 31.7
+      },
+      {
+        "period": "2026-04-03",
+        "value": 43.2
+      },
+      {
+        "period": "2026-04-04",
+        "value": 28.4
+      },
+      {
+        "period": "2026-04-05",
+        "value": 0.0
+      },
+      {
+        "period": "2026-04-06",
+        "value": 37.2
+      },
+      {
+        "period": "2026-04-07",
+        "value": 41.9
+      },
+      {
+        "period": "2026-04-08",
+        "value": 34.7
+      },
+      {
+        "period": "2026-04-09",
+        "value": 0.0
+      },
+      {
+        "period": "2026-04-10",
+        "value": 39.0
+      },
+      {
+        "period": "2026-04-11",
+        "value": 0.0
+      },
+      {
+        "period": "2026-04-12",
+        "value": 38.9
+      },
+      {
+        "period": "2026-04-13",
+        "value": 36.0
+      },
+      {
+        "period": "2026-04-14",
+        "value": 41.8
+      },
+      {
+        "period": "2026-04-15",
+        "value": 30.4
+      },
+      {
+        "period": "2026-04-16",
+        "value": 33.0
+      },
+      {
+        "period": "2026-04-17",
+        "value": 35.1
+      },
+      {
+        "period": "2026-04-18",
+        "value": 34.5
+      },
+      {
+        "period": "2026-04-19",
+        "value": 29.5
+      },
+      {
+        "period": "2026-04-20",
+        "value": 46.8
+      },
+      {
+        "period": "2026-04-21",
+        "value": 53.3
+      },
+      {
+        "period": "2026-04-22",
+        "value": 37.8
+      },
+      {
+        "period": "2026-04-23",
+        "value": 32.1
+      },
+      {
+        "period": "2026-04-24",
+        "value": 35.3
+      },
+      {
+        "period": "2026-04-25",
+        "value": 21.7
+      },
+      {
+        "period": "2026-04-26",
+        "value": 29.2
+      },
+      {
+        "period": "2026-04-27",
+        "value": 40.4
+      },
+      {
+        "period": "2026-04-28",
+        "value": 29.7
+      },
+      {
+        "period": "2026-04-29",
+        "value": 31.4
+      },
+      {
+        "period": "2026-04-30",
+        "value": 31.1
+      },
+      {
+        "period": "2026-05-01",
+        "value": 27.0
+      },
+      {
+        "period": "2026-05-02",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-03",
+        "value": 50.8
+      },
+      {
+        "period": "2026-05-04",
+        "value": 35.7
+      },
+      {
+        "period": "2026-05-05",
+        "value": 26.5
+      },
+      {
+        "period": "2026-05-06",
+        "value": 44.7
+      },
+      {
+        "period": "2026-05-07",
+        "value": 29.8
+      },
+      {
+        "period": "2026-05-08",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-09",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-10",
+        "value": 28.9
+      },
+      {
+        "period": "2026-05-11",
+        "value": 26.3
+      },
+      {
+        "period": "2026-05-12",
+        "value": 40.6
+      },
+      {
+        "period": "2026-05-13",
+        "value": 27.3
+      },
+      {
+        "period": "2026-05-14",
+        "value": 35.7
+      },
+      {
+        "period": "2026-05-15",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-16",
+        "value": 38.2
+      },
+      {
+        "period": "2026-05-17",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-18",
+        "value": 30.2
+      },
+      {
+        "period": "2026-05-19",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-20",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-21",
+        "value": 40.2
+      },
+      {
+        "period": "2026-05-22",
+        "value": 36.6
+      },
+      {
+        "period": "2026-05-23",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-24",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-25",
+        "value": 34.6
+      },
+      {
+        "period": "2026-05-26",
+        "value": 60.0
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-02-26",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-02-27",
+        "value": 6,
+        "weighted_value": 6.0
+      },
+      {
+        "period": "2026-02-28",
+        "value": 8,
+        "weighted_value": 8.0
+      },
+      {
+        "period": "2026-03-01",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-03-02",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-03-03",
+        "value": 10,
+        "weighted_value": 10.0
+      },
+      {
+        "period": "2026-03-04",
+        "value": 10,
+        "weighted_value": 10.0
+      },
+      {
+        "period": "2026-03-05",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-03-06",
+        "value": 6,
+        "weighted_value": 6.0
+      },
+      {
+        "period": "2026-03-07",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-03-08",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-03-09",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-03-10",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-03-11",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-03-12",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-03-13",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-03-14",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-03-15",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-03-16",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-03-17",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-03-18",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-03-19",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-03-20",
+        "value": 6,
+        "weighted_value": 6.0
+      },
+      {
+        "period": "2026-03-21",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-03-22",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-03-23",
+        "value": 8,
+        "weighted_value": 8.0
+      },
+      {
+        "period": "2026-03-24",
+        "value": 7,
+        "weighted_value": 7.0
+      },
+      {
+        "period": "2026-03-25",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-03-26",
+        "value": 9,
+        "weighted_value": 9.0
+      },
+      {
+        "period": "2026-03-27",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-03-28",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-03-29",
+        "value": 6,
+        "weighted_value": 6.0
+      },
+      {
+        "period": "2026-03-30",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-03-31",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-04-01",
+        "value": 7,
+        "weighted_value": 7.0
+      },
+      {
+        "period": "2026-04-02",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-03",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-04-04",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-05",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-04-06",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-04-07",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-04-08",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-04-09",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-04-10",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-04-11",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-04-12",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-04-13",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-14",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-04-15",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-16",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-17",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-18",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-19",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-20",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-21",
+        "value": 5,
+        "weighted_value": 5.0
+      },
+      {
+        "period": "2026-04-22",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-23",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-24",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-25",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-04-26",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-27",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-04-28",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-29",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-04-30",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-01",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-02",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-03",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-04",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-05",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-06",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-07",
+        "value": 2,
+        "weighted_value": 2.0
+      },
+      {
+        "period": "2026-05-08",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-09",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-10",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-11",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-12",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-13",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-14",
+        "value": 4,
+        "weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-15",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-16",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-17",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-18",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-19",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-20",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-21",
+        "value": 1,
+        "weighted_value": 1.0
+      },
+      {
+        "period": "2026-05-22",
+        "value": 3,
+        "weighted_value": 3.0
+      },
+      {
+        "period": "2026-05-23",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-24",
+        "value": 0,
+        "weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-25",
+        "value": 33,
+        "weighted_value": 33.0
+      },
+      {
+        "period": "2026-05-26",
+        "value": 67,
+        "weighted_value": 67.0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "youtube",
+        "count": 247,
+        "ratio": 71.2
+      },
+      {
+        "source": "naver_blog",
+        "count": 100,
+        "ratio": 28.8
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "count": 347,
+      "weighted_count": 347.0
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "[경제학]명륜진사갈비 점주들의 피눈물... 샤브올데이 1300억 '헐값 매각'의 소름돋는 진실",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-26",
+      "url": "https://www.youtube.com/watch?v=jrF4ui02qRA",
+      "views": 239653,
+      "engagements": 2605
+    },
+    {
+      "title": "두쫀쿠? 짭쫀쿠 무제한 만들어 먹는 꿀팁ㅋㅋ #샤브올데이 #두쫀쿠 #땅쫀쿠 #꿀팁",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-26",
+      "url": "https://www.youtube.com/watch?v=siVtn0Owl-c",
+      "views": 5018,
+      "engagements": 13
+    },
+    {
+      "title": "두쫀쿠까지 무한인 샤브올데이",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-26",
+      "url": "https://www.youtube.com/watch?v=mUQ4FKbA5Cw",
+      "views": 1642,
+      "engagements": 4
+    },
+    {
+      "title": "칼국수에 버터를..?😲 #샤브올데이 #버터칼국수 #의정부맛집",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-27",
+      "url": "https://www.youtube.com/watch?v=ndwdE-hp-AM",
+      "views": 1535,
+      "engagements": 4
+    },
+    {
+      "title": "샤브 올데이에서 혹시 이거 해 봤어??",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-27",
+      "url": "https://www.youtube.com/watch?v=2lVW73mNnpU",
+      "views": 6159,
+      "engagements": 7
+    },
+    {
+      "title": "샤브올데이 히든레시피 저장해라",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-27",
+      "url": "https://www.youtube.com/watch?v=JoNTMde9KjY",
+      "views": 6405,
+      "engagements": 26
+    },
+    {
+      "title": "800억 불법 대부업 명륜당의 충격 근황, 샤브올데이 1300억 '헐값 매각'의 충격적 진실",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-27",
+      "url": "https://www.youtube.com/watch?v=incbNoInfhU",
+      "views": 343,
+      "engagements": 14
+    },
+    {
+      "title": "샤브올데이 졸리비 헐값 매각 사태 총정리: 산업은행 650억 회수와 불법 대출의 나비효과",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-27",
+      "url": "https://www.youtube.com/watch?v=iOKPCn9vDq4",
+      "views": 1161,
+      "engagements": 10
+    },
+    {
+      "title": "샤브올데이에서 짭쫀쿠  ㅋㅋㅋㅋㅋ",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-27",
+      "url": "https://www.youtube.com/watch?v=wczpNxaZdiY",
+      "views": 1282,
+      "engagements": 6
+    },
+    {
+      "title": "1,300억 벌고도 빚더미? 명륜진사갈비 회장의 끔찍한 최후 (샤브올데이 졸리비 매각의 소름돋는 진실)",
+      "source": "youtube",
+      "term": "샤브올데이",
+      "term_type": "canonical",
+      "published_at": "2026-02-28",
+      "url": "https://www.youtube.com/watch?v=hdBMMbcU1Kw",
+      "views": 661608,
+      "engagements": 10036
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 64.8점이며 상태는 Watch입니다.",
+    "evidence": "최근 평균 Trend Index는 24.4857이고, 피크 대비 하락률은 59.1905%입니다. 가장 많은 raw item이 수집된 채널은 youtube입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 24.4857,
+      "previous_mean": 18.7714,
+      "peak_trend_index": 60.0,
+      "recent_slope": 60.0,
+      "decline_from_peak": 59.1905,
+      "total_mentions": 347.0,
+      "total_weighted_mentions": 347.0,
+      "total_views": 7391517.0,
+      "total_engagements": 93837.0,
+      "view_per_item": 21301.2017,
+      "engagement_per_item": 270.4236,
+      "source_diversity": 0.8556,
+      "weekly_rows": 14
+    },
+    "processed_rows": {
+      "term_daily": 77,
+      "keyword_daily": 90,
+      "weekly_partition": 14
+    }
+  }
+}

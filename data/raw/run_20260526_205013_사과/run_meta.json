@@ -1,0 +1,39 @@
+{
+  "keyword": "사과",
+  "keyword_set": {
+    "canonical": "사과",
+    "alias": [],
+    "typo": [],
+    "related": []
+  },
+  "keyword_set_mode": "single_term_fallback",
+  "terms": [
+    {
+      "term": "사과",
+      "term_type": "canonical",
+      "term_weight": 1.0
+    }
+  ],
+  "sources": [
+    "youtube",
+    "naver_news",
+    "naver_blog"
+  ],
+  "days": 90,
+  "limits": {
+    "youtube": 250,
+    "naver_news": 300,
+    "naver_blog": 300
+  },
+  "saved_files": {
+    "naver_news": "C:\\Users\\USER-PC\\Desktop\\neww\\bigwave_mvp_v2\\data\\raw\\run_20260526_205013_사과\\naver_news.csv",
+    "naver_blog": "C:\\Users\\USER-PC\\Desktop\\neww\\bigwave_mvp_v2\\data\\raw\\run_20260526_205013_사과\\naver_blog.csv",
+    "raw_all": "C:\\Users\\USER-PC\\Desktop\\neww\\bigwave_mvp_v2\\data\\raw\\run_20260526_205013_사과\\raw_all.csv"
+  },
+  "errors": {
+    "youtube": "All YouTube API keys failed."
+  },
+  "run_id": "run_20260526_205013_사과",
+  "created_at": "2026-05-26T11:50:16.142208+00:00",
+  "storage_backend": "csv"
+}

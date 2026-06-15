@@ -1,0 +1,259 @@
+{
+  "run_id": "run_20260526_205226_월드컵",
+  "keyword": "월드컵",
+  "keyword_set": {
+    "canonical": "월드컵",
+    "alias": [],
+    "typo": [],
+    "related": []
+  },
+  "keyword_set_mode": "single_term_fallback",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube",
+      "naver_news",
+      "naver_blog"
+    ],
+    "analysis_days": 30,
+    "include_related": true,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "naver_blog",
+    "naver_news"
+  ],
+  "missing_sources": [
+    "youtube"
+  ],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다.",
+    "선택한 source 중 현재 run에 없는 채널이 있습니다: youtube. 해당 채널을 보려면 재수집이 필요합니다."
+  ],
+  "summary": {
+    "ts_score": 60.6,
+    "status_label": "Watch",
+    "collected_items": 600,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 70.0,
+    "reaction_score": 0.0,
+    "saturation_score": 100.0,
+    "decline_risk": 0.0
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-05-26",
+        "value": 56.7
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-05-26",
+        "value": 600.0,
+        "weighted_value": 600.0,
+        "raw_value": 600,
+        "raw_weighted_value": 600.0
+      }
+    ],
+    "weekly_partition_series": [
+      {
+        "period": "2026-05-25",
+        "content_supply": 600.0,
+        "weighted_supply": 600.0,
+        "views": 0.0,
+        "view_per_item": 0.0,
+        "avg_velocity": 0.0,
+        "demand_pressure": 0.0
+      }
+    ],
+    "velocity_z_series": [
+      {
+        "period": "2026-05-25",
+        "supply_z": 0.0,
+        "velocity_z": 0.0,
+        "pressure_z": 0.0,
+        "threshold": 1.5,
+        "baseline": 0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "naver_blog",
+        "count": 300,
+        "ratio": 50.0
+      },
+      {
+        "source": "naver_news",
+        "count": 300,
+        "ratio": 50.0
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "월드컵",
+      "term_type": "canonical",
+      "count": 600,
+      "weighted_count": 600.0
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "윌콕스 디렉터 &quot;청신호&quot;... 맨유, 뉴캐슬 이탈 '원하는' 5,500만... ",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/blue_london24/224296287176",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "오늘의 읽어주는, 26년 5월 26일 화요일 전국 주요 소식",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/ctn_media/224296863975",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "LAFC, 시애틀 사운더스에 1-0 승리…2026 MLS 시즌 경기 리뷰",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/chameleon_uk/224296836176",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "영화 군체 2주차 특전 아코디언 엽서 극장",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/dydtmd4/224297118640",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "스포츠캐스터 합격 전략 l 면접관의 마음을 사로잡는 오디션... ",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/winwinspeech/224297119204",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "binance 비트코인 매매 상장정보 사이트 추천",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/fuyik3612/224297118211",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "부산 결혼 준비 시작 [1주차]",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/dragonjun_-/224297117507",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "2026_05_25 ニュース",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/study_life_24/224296144312",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "잠실새내역 &lt;펍마이마이&gt; - 찐 솔직후기 | 대형스크린으로 야구... ",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/rurururu_/224297116421",
+      "views": 0,
+      "engagements": 0
+    },
+    {
+      "title": "바낸거래소페이백",
+      "source": "naver_blog",
+      "term": "월드컵",
+      "term_type": "canonical",
+      "published_at": "2026-05-26",
+      "url": "https://blog.naver.com/fuyik3612/224297115595",
+      "views": 0,
+      "engagements": 0
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 60.6점이며 상태는 Watch입니다.",
+    "evidence": "최근 평균 Trend Index는 56.7이고, 피크 대비 하락률은 0.0%입니다. 가장 많은 raw item이 수집된 채널은 naver_blog입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 56.7,
+      "previous_mean": 0.0,
+      "peak_trend_index": 56.7,
+      "recent_slope": 0.0,
+      "decline_from_peak": 0.0,
+      "total_mentions": 600.0,
+      "total_weighted_mentions": 600.0,
+      "total_views": 0.0,
+      "total_engagements": 0.0,
+      "view_per_item": 0.0,
+      "engagement_per_item": 0.0,
+      "source_diversity": 2.0,
+      "active_days": 1,
+      "coverage_ratio": 1.0,
+      "weekly_rows": 1
+    },
+    "processed_rows": {
+      "term_daily": 2,
+      "keyword_daily": 1,
+      "weekly_partition": 1
+    }
+  }
+}

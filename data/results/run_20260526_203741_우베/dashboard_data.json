@@ -1,0 +1,460 @@
+{
+  "run_id": "run_20260526_203741_우베",
+  "keyword": "우베",
+  "keyword_set": {
+    "canonical": "우베",
+    "alias": [
+      "ube",
+      "우베 디저트",
+      "우베맛"
+    ],
+    "typo": [
+      "우배"
+    ],
+    "related": [
+      "보라색 디저트",
+      "필리핀 디저트",
+      "우베 케이크"
+    ]
+  },
+  "keyword_set_mode": "preset",
+  "analysis_options": {
+    "selected_sources": [
+      "youtube"
+    ],
+    "analysis_days": 90,
+    "include_related": false,
+    "date_basis": "published_at",
+    "period_anchor": "max_published_at_in_filtered_data",
+    "rerun_policy": "reanalyze_only"
+  },
+  "available_sources": [
+    "youtube"
+  ],
+  "missing_sources": [],
+  "warnings": [
+    "분석 기간은 수집 데이터의 최신 발행일(published_at)을 기준으로 계산됩니다. API 제공사 검색 결과가 오늘까지의 데이터를 항상 포함하지 않을 수 있습니다.",
+    "연관 키워드(term_type=related)를 제외한 핵심 키워드 기준 분석입니다."
+  ],
+  "summary": {
+    "ts_score": 58.1,
+    "status_label": "Watch",
+    "collected_items": 44,
+    "last_updated": "2026-05-26"
+  },
+  "component_scores": {
+    "growth_score": 56.5,
+    "reaction_score": 76.8,
+    "saturation_score": 36.7,
+    "decline_risk": 44.3
+  },
+  "charts": {
+    "trend_index_series": [
+      {
+        "period": "2026-05-08",
+        "value": 40.0
+      },
+      {
+        "period": "2026-05-09",
+        "value": 20.0
+      },
+      {
+        "period": "2026-05-10",
+        "value": 27.9
+      },
+      {
+        "period": "2026-05-11",
+        "value": 31.5
+      },
+      {
+        "period": "2026-05-12",
+        "value": 31.5
+      },
+      {
+        "period": "2026-05-13",
+        "value": 16.9
+      },
+      {
+        "period": "2026-05-14",
+        "value": 10.7
+      },
+      {
+        "period": "2026-05-15",
+        "value": 19.5
+      },
+      {
+        "period": "2026-05-16",
+        "value": 19.5
+      },
+      {
+        "period": "2026-05-17",
+        "value": 16.3
+      },
+      {
+        "period": "2026-05-18",
+        "value": 7.5
+      },
+      {
+        "period": "2026-05-19",
+        "value": 24.5
+      },
+      {
+        "period": "2026-05-20",
+        "value": 17.0
+      },
+      {
+        "period": "2026-05-21",
+        "value": 17.0
+      },
+      {
+        "period": "2026-05-22",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-23",
+        "value": 0.0
+      },
+      {
+        "period": "2026-05-24",
+        "value": 16.6
+      },
+      {
+        "period": "2026-05-25",
+        "value": 28.7
+      },
+      {
+        "period": "2026-05-26",
+        "value": 50.6
+      }
+    ],
+    "content_series": [
+      {
+        "period": "2026-05-08",
+        "value": 1.0,
+        "weighted_value": 0.8,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-05-09",
+        "value": 0.5,
+        "weighted_value": 0.4,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-10",
+        "value": 0.7,
+        "weighted_value": 0.53,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-05-11",
+        "value": 1.0,
+        "weighted_value": 0.8,
+        "raw_value": 2,
+        "raw_weighted_value": 1.6
+      },
+      {
+        "period": "2026-05-12",
+        "value": 1.0,
+        "weighted_value": 0.8,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-13",
+        "value": 0.7,
+        "weighted_value": 0.53,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-14",
+        "value": 0.3,
+        "weighted_value": 0.27,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-05-15",
+        "value": 0.7,
+        "weighted_value": 0.53,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-05-16",
+        "value": 0.7,
+        "weighted_value": 0.53,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-17",
+        "value": 0.7,
+        "weighted_value": 0.53,
+        "raw_value": 1,
+        "raw_weighted_value": 0.8
+      },
+      {
+        "period": "2026-05-18",
+        "value": 0.3,
+        "weighted_value": 0.27,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-19",
+        "value": 1.3,
+        "weighted_value": 1.07,
+        "raw_value": 3,
+        "raw_weighted_value": 2.4
+      },
+      {
+        "period": "2026-05-20",
+        "value": 1.0,
+        "weighted_value": 0.8,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-21",
+        "value": 1.0,
+        "weighted_value": 0.8,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-22",
+        "value": 0.0,
+        "weighted_value": 0.0,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-23",
+        "value": 0.0,
+        "weighted_value": 0.0,
+        "raw_value": 0,
+        "raw_weighted_value": 0.0
+      },
+      {
+        "period": "2026-05-24",
+        "value": 1.3,
+        "weighted_value": 1.33,
+        "raw_value": 4,
+        "raw_weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-25",
+        "value": 2.7,
+        "weighted_value": 2.67,
+        "raw_value": 4,
+        "raw_weighted_value": 4.0
+      },
+      {
+        "period": "2026-05-26",
+        "value": 11.3,
+        "weighted_value": 11.33,
+        "raw_value": 26,
+        "raw_weighted_value": 26.0
+      }
+    ],
+    "source_breakdown": [
+      {
+        "source": "youtube",
+        "count": 44,
+        "ratio": 100.0
+      }
+    ]
+  },
+  "term_breakdown": [
+    {
+      "term": "우베",
+      "term_type": "canonical",
+      "count": 10,
+      "weighted_count": 10.0
+    },
+    {
+      "term": "우베맛",
+      "term_type": "alias",
+      "count": 9,
+      "weighted_count": 9.0
+    },
+    {
+      "term": "우배",
+      "term_type": "typo",
+      "count": 10,
+      "weighted_count": 8.0
+    },
+    {
+      "term": "우베 디저트",
+      "term_type": "alias",
+      "count": 8,
+      "weighted_count": 8.0
+    },
+    {
+      "term": "ube",
+      "term_type": "alias",
+      "count": 7,
+      "weighted_count": 7.0
+    }
+  ],
+  "raw_preview": [
+    {
+      "title": "온 세상이 #우베 #곰돈곰산 #우베와플 #와플대학 #먹방",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-08",
+      "url": "https://www.youtube.com/watch?v=NoKp1ApZ8h8",
+      "views": 22456,
+      "engagements": 565
+    },
+    {
+      "title": "CU 편의점 신상만 5만원 넘은 신빵털이",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-10",
+      "url": "https://www.youtube.com/watch?v=qN1YCrh64hs",
+      "views": 79584,
+      "engagements": 1241
+    },
+    {
+      "title": "필리핀사람의 스타벅스 ￼우베 리뷰 💜 #우베 #스타벅스",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-11",
+      "url": "https://www.youtube.com/watch?v=fF5tsf7mvGY",
+      "views": 1342,
+      "engagements": 11
+    },
+    {
+      "title": "[EN] 해외에서 난리라는 우베💜 대체 우베가 뭔데🥄ㅣ돈슐랭 / 14F",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-11",
+      "url": "https://www.youtube.com/watch?v=x2fthIBw9Iw",
+      "views": 188847,
+      "engagements": 2828
+    },
+    {
+      "title": "우베 컵빙수부터 스무디까지, 대체불가 우베 레시피 4종💜",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-14",
+      "url": "https://www.youtube.com/watch?v=nofJANxE6qY",
+      "views": 1595,
+      "engagements": 110
+    },
+    {
+      "title": "우배 유행 탑승🥖 맛있지만 은은한 느낌? #식단일기 #whatieatinaday",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-15",
+      "url": "https://www.youtube.com/watch?v=w509Uz92RXA",
+      "views": 1862,
+      "engagements": 3
+    },
+    {
+      "title": "우배 팬케이크",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-17",
+      "url": "https://www.youtube.com/watch?v=WRVqOGhFc9o",
+      "views": 294,
+      "engagements": 2
+    },
+    {
+      "title": "편의점 우베 디저트 털기!! #편의점신상",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-19",
+      "url": "https://www.youtube.com/watch?v=u4z4kv1S9-Q",
+      "views": 15157,
+      "engagements": 164
+    },
+    {
+      "title": "편의점을 장악한 해외 유행 우베디저트 싹 모아옴‼️",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-19",
+      "url": "https://www.youtube.com/watch?v=aurfRnF6pBs",
+      "views": 65781,
+      "engagements": 1212
+    },
+    {
+      "title": "연세우유 우베 생크림빵 & 깨먹는 하트 생크림빵 리뷰💜",
+      "source": "youtube",
+      "term": "우배",
+      "term_type": "typo",
+      "published_at": "2026-05-19",
+      "url": "https://www.youtube.com/watch?v=SKDL3Augs58",
+      "views": 2174,
+      "engagements": 7
+    }
+  ],
+  "methodology": {
+    "formula_version": "TS_v1_temp",
+    "description": "TS는 성장성, 반응 강도, 포화도, 하락 위험을 종합한 임시 트렌드 판단 점수입니다.",
+    "components": [
+      {
+        "name": "growth_score",
+        "description": "최근 Trend Index 상승 속도"
+      },
+      {
+        "name": "reaction_score",
+        "description": "조회수와 참여도 기반 반응 강도"
+      },
+      {
+        "name": "saturation_score",
+        "description": "피크 대비 최근 유지력"
+      },
+      {
+        "name": "decline_risk",
+        "description": "피크 대비 하락과 최근 기울기 기반 하락 위험"
+      }
+    ],
+    "notice": "TS_v1_temp는 MVP 검증용 임시 산식이며, 이후 실제 사례 검증을 통해 보정됩니다."
+  },
+  "report": {
+    "summary": "현재 TS Score는 58.1점이며 상태는 Watch입니다.",
+    "evidence": "최근 평균 Trend Index는 18.5571이고, 피크 대비 하락률은 63.3258%입니다. 가장 많은 raw item이 수집된 채널은 youtube입니다.",
+    "risk": "현재 하락 위험은 임시 기준에서 과도하게 높지는 않습니다.",
+    "recommendation": "채널별 source breakdown과 term breakdown을 함께 확인한 뒤, 필요하면 기간/related 포함 여부를 바꿔 재분석하세요."
+  },
+  "debug": {
+    "trend_features": {
+      "recent_mean": 18.5571,
+      "previous_mean": 16.4143,
+      "peak_trend_index": 50.6,
+      "recent_slope": 33.6,
+      "decline_from_peak": 63.3258,
+      "total_mentions": 44.0,
+      "total_weighted_mentions": 42.0,
+      "total_views": 424381.0,
+      "total_engagements": 6494.0,
+      "view_per_item": 9645.0227,
+      "engagement_per_item": 147.5909,
+      "source_diversity": 0.5263,
+      "active_days": 10,
+      "coverage_ratio": 0.5263,
+      "weekly_rows": 4
+    },
+    "processed_rows": {
+      "term_daily": 14,
+      "keyword_daily": 19,
+      "weekly_partition": 4
+    }
+  }
+}

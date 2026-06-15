@@ -1,0 +1,6 @@
+__pycache__/
+.ipynb_checkpoints/
+.env
+backend/data/bigwave.db
+backend/data/exports/*
+backend/src/collectors/local_youtube_key.py

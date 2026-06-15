@@ -1,0 +1,127 @@
+{
+  "keyword": "왁뿌볼",
+  "keyword_set": {
+    "canonical": "왁뿌볼",
+    "terms": [
+      {
+        "term": "왁뿌볼",
+        "term_type": "canonical",
+        "term_weight": 1.0
+      },
+      {
+        "term": "뿌리 응원봉",
+        "term_type": "alias",
+        "term_weight": 0.9
+      },
+      {
+        "term": "뿌리봉",
+        "term_type": "alias",
+        "term_weight": 0.85
+      },
+      {
+        "term": "왁타버스 응원봉",
+        "term_type": "alias",
+        "term_weight": 0.8
+      },
+      {
+        "term": "왁타버스 굿즈",
+        "term_type": "alias",
+        "term_weight": 0.7
+      },
+      {
+        "term": "왁물원 굿즈",
+        "term_type": "alias",
+        "term_weight": 0.6
+      },
+      {
+        "term": "와뿌볼",
+        "term_type": "typo",
+        "term_weight": 0.5
+      },
+      {
+        "term": "왁부볼",
+        "term_type": "typo",
+        "term_weight": 0.4
+      },
+      {
+        "term": "왁뿌불",
+        "term_type": "typo",
+        "term_weight": 0.4
+      },
+      {
+        "term": "왁타버스",
+        "term_type": "related",
+        "term_weight": 0.9
+      },
+      {
+        "term": "우왁굳",
+        "term_type": "related",
+        "term_weight": 0.8
+      },
+      {
+        "term": "뿌리",
+        "term_type": "related",
+        "term_weight": 0.8
+      },
+      {
+        "term": "응원봉",
+        "term_type": "related",
+        "term_weight": 0.75
+      },
+      {
+        "term": "굿즈",
+        "term_type": "related",
+        "term_weight": 0.7
+      },
+      {
+        "term": "이세돌",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "왁물원",
+        "term_type": "related",
+        "term_weight": 0.6
+      },
+      {
+        "term": "버츄얼 아이돌",
+        "term_type": "related",
+        "term_weight": 0.5
+      },
+      {
+        "term": "콘서트",
+        "term_type": "related",
+        "term_weight": 0.4
+      },
+      {
+        "term": "팬미팅",
+        "term_type": "related",
+        "term_weight": 0.4
+      }
+    ]
+  },
+  "keyword_set_mode": null,
+  "terms": [],
+  "sources": [
+    "youtube",
+    "naver_news",
+    "naver_blog"
+  ],
+  "days": 30,
+  "limits": {
+    "youtube": 50,
+    "naver_news": 300,
+    "naver_blog": 300
+  },
+  "saved_files": {
+    "youtube": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_012535_왁뿌볼\\youtube.csv",
+    "naver_news": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_012535_왁뿌볼\\naver_news.csv",
+    "naver_blog": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_012535_왁뿌볼\\naver_blog.csv",
+    "raw_all": "D:\\상명대학교자료\\26-1(4)\\3. 빅데이터시각화\\bigwave_mvp_v2_team_share_20260605\\bigwave_mvp_v5\\data\\raw\\run_20260614_012535_왁뿌볼\\raw_all.csv"
+  },
+  "errors": {},
+  "fallback_sources": {},
+  "run_id": "run_20260614_012535_왁뿌볼",
+  "created_at": "2026-06-13T16:25:39.024032+00:00",
+  "storage_backend": "csv"
+}

@@ -1,0 +1,1038 @@
+
+### 4주차_실습.ipynb
+
+hits 0
+
+
+### 9주차실습.ipynb
+
+hits 0
+
+
+### 단어키워드_리스트_네이버까지.ipynb
+
+
+--- cell 2 ---
+# --- [Cell 1: 데이터 수집] ---
+import time
+import pandas as pd
+from googleapiclient.discovery import build
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 한글 폰트 깨짐 방지 (Windows 기준, Mac은 'AppleGothic' 사용)
+plt.rc('font', family='Malgun Gothic')
+plt.rcParams['axes.unicode_minus'] = False
+
+# 1. API 키와 검색어 설정(AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI)
+API_KEY ="AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI"
+youtube = build('youtube', 'v3', developerKey=API_KEY)
+
+
+
+# 비교하고 싶은 키워드들을 리스트로 넣습니다.
+df_keywords = pd.read_csv("/content/유행 키워드.csv")
+keyword_list = df_keywords['items'].tolist()
+video_data = []
+
+print("데이터 수집을 시작합니다. (API 할당량에 주의하세요!)")
+
+# 2. 키워드별 데이터 수집 루프
+for kw in keyword_list:
+    next_page_token = None
+    print(f"👉 '{kw}' 검색 중...")
+
+    # 예시로 각 키워드당 3페이지(약 150개)만 수집 (쿼터 절약)
+    for i in range(3):
+        try:
+            res = youtube.search().list(
+                q=kw, part='snippet', maxResults=50, type='video',
+                order='viewCount', pageToken=next_page_token,
+                publishedAfter='2023-01-01T00:00:00Z'
+            ).execute()
+
+            for item in res['items']:
+                v_id = item['id']['videoId']
+                snippet = item['snippet']
+
+                # 상세 통계 가져오기
+                try:
+                    stats_res = youtube.videos().list(part='statistics', id=v_id).execute()
+                    stats = stats_res['items'][0]['statistics']
+
+                    video_data.append({
+                        'keyword': kw,  # 🔥 어느 키워드의 영상인지 라벨링 추가!
+                        'video_id': v_id,
+                        'published_at': snippet['publishedAt'],
+                        'view_count': int(stats.get('viewCount', 0))
+                    })
+                except Exception as e:
+                    continue
+
+            next_page_token = res.get('nextPageToken')
+            if not next_page_token:
+                break
+
+        except Exception as e:
+            print(f"API 요청 에러 발생: {e}")
+            break
+
+    # 키워드 하나 끝날 때마다 잠시 휴식 (API 호출 제한 방지)
+    time.sleep(1)
+
+df_raw = pd.DataFrame(video_data)
+print(f"총 {len(df_raw)}개의 영상 데이터 수집 완료!")
+
+# ==========================================
+# 3. 데이터 전처리 (일간 데이터를 '월별'로 묶기)
+# ==========================================
+# 문자열 날짜를 파이썬 datetime 객체로 변환
+df_raw['published_at'] = pd.to_datetime(df_raw['published_at'])
+
+# 유행 수명주기를 보려면 일간 데이터는 너무 지저분합니다. '연-월' 단위로 묶어줍니다.
+df_raw['year_month'] = df_raw['published_at'].dt.to_period('M').dt.to_timestamp()
+
+# 키워드 & 월별로 그룹핑하여 조회수 총합(또는 평균) 계산
+trend_df = df_raw.groupby(['keyword', 'year_month'])['view_count'].sum().reset_index()
+
+# ==========================================
+# 4. 수명주기 시계열 그래프 그리기 (겹치게!)
+# ==========================================
+plt.figure(figsize=(12, 6))
+
+# seaborn의 lineplot은 hue 속성을 주면 알아서 선을 겹쳐서(Overlapping) 그려줍니다.
+sns.lineplot(data=trend_df, x='year_month', y='view_count', hue='keyword', marker='o', linewidth=2)
+
+plt.title('유행 아이템 수명주기 (월별 유튜브 누적 조회수)', fontsize=16)
+plt.xlabel('발행 월', fontsize=12)
+plt.ylabel('월간 총 조회수 (View Count)', fontsize=12)
+plt.xticks(rotation=45)
+plt.legend(title='검색어')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.tight_layout()
+
+# 그래프 출력
+plt.show()
+
+
+--- cell 3 ---
+import pandas as pd
+
+# (이전 코드에서 이어짐)
+# trend_df 에는 ['keyword', 'year_month', 'view_count'] 가 있는 상태입니다.
+
+# ==========================================
+# 🌟 STEP 1: X축 정규화 (상대적 시간축 '경과 월' 만들기)
+# ==========================================
+# 1. 각 키워드별로 가장 처음 영상이 올라온(또는 검색된) 달을 찾습니다. (이게 T=0 기준점이 됩니다)
+start_months = trend_df.groupby('keyword')['year_month'].transform('min')
+
+# 2. 현재 월과 최초 등장 월의 차이를 계산하여 '경과_월(Month_T)' 컬럼을 만듭니다.
+# (연도 차이 * 12) + (월 차이) = 총 몇 개월이 지났는지 나옴
+trend_df['경과_월'] = (trend_df['year_month'].dt.year - start_months.dt.year) * 12 + \
+                      (trend_df['year_month'].dt.month - start_months.dt.month)
+
+# ==========================================
+# 🌟 STEP 2: Y축 정규화 (조회수 스케일 맞추기)
+# ==========================================
+# 아이템마다 조회수 스케일(100만 vs 1000만)이 다르므로 패턴만 보기 위해 최고점을 100으로 누릅니다.
+# 각 키워드별 가장 높았던 조회수를 찾습니다.
+max_views = trend_df.groupby('keyword')['view_count'].transform('max')
+
+# 최고점 대비 현재 월의 조회수 비율(%)을 계산합니다.
+trend_df['조회수_정규화(%)'] = (trend_df['view_count'] / max_views) * 100
+
+
+# ==========================================
+# 🌟 STEP 3: 정규화된 데이터로 그래프 다시 그리기
+# ==========================================
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 6))
+
+# X축은 '경과_월', Y축은 '조회수_정규화(%)' 를 사용합니다!
+sns.lineplot(data=trend_df, x='경과_월', y='조회수_정규화(%)', hue='keyword', marker='o', linewidth=2)
+
+plt.title('아이템별 유행 수명주기 비교 (T=0 정규화)', fontsize=16)
+plt.xlabel('최초 등장 이후 경과된 개월 수 (T+n)', fontsize=12) # X축 이름 변경
+plt.ylabel('최고점 대비 조회수 비율 (%)', fontsize=12)         # Y축 이름 변경
+plt.grid(True, linestyle='--', alpha=0.6)
+
+# X축 눈금을 0, 1, 2, 3.. 처럼 딱 떨어지게 설정
+max_month = trend_df['경과_월'].max()
+plt.xticks(range(0, max_month + 1))
+
+plt.tight_layout()
+plt.show()
+
+
+--- cell 4 ---
+# 기존 trend_df에 '3개월 이동평균' 컬럼을 추가합니다.
+# (과거 3개월치 평균을 내서 선을 부드럽게 깎아줍니다)
+trend_df['조회수_스무딩(%)'] = trend_df.groupby('keyword')['조회수_정규화(%)'].transform(
+    lambda x: x.rolling(window=3, min_periods=1).mean()
+)
+
+# 👉 그래프 그릴 때 y값을 '조회수_정규화(%)' 대신 '조회수_스무딩(%)'으로 바꿉니다!
+# sns.lineplot(data=trend_df, x='경과_월', y='조회수_스무딩(%)', hue='keyword', ...)
+
+
+--- cell 5 ---
+import time
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from googleapiclient.discovery import build
+
+# 한글 폰트를 아예 안 쓰므로 기본 폰트 사용 (폰트 깨짐 이슈 완벽 해결!)
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['axes.unicode_minus'] = False
+
+# ==========================================
+# 1. API 세팅 및 검색어 리스트
+# ==========================================
+API_KEY = "AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI"
+youtube = build('youtube', 'v3', developerKey=API_KEY)
+
+# 기존 데이터프레임에서 리스트로 가져왔다고 가정
+keyword_list = ["두바이 초콜릿", "탕후루", "요아정", "마라탕", "흑당버블티"]
+video_data = []
+
+print("데이터 수집을 시작합니다...")
+
+# ==========================================
+# 2. 데이터 수집 (한글 이름 대신 인덱스 번호 부여!)
+# ==========================================
+# enumerate를 사용해 0, 1, 2... 인덱스 번호를 같이 뽑아냅니다.
+for idx, kw in enumerate(keyword_list):
+    # 한글 키워드 대신 Item_0, Item_1 형태로 라벨링
+    item_label = f"Item_{idx}"
+
+    next_page_token = None
+    print(f"👉 [{item_label}] 수집 중... (원래 키워드: {kw})")
+
+    for i in range(1): # 3페이지씩만 테스트
+        try:
+            res = youtube.search().list(
+                q=kw, part='snippet', maxResults=50, type='video',
+                order='viewCount', pageToken=next_page_token,
+                publishedAfter='2022-01-01T00:00:00Z'
+            ).execute()
+
+            for item in res['items']:
+                v_id = item['id']['videoId']
+                snippet = item['snippet']
+
+                try:
+                    stats_res = youtube.videos().list(part='statistics', id=v_id).execute()
+                    stats = stats_res['items'][0]['statistics']
+
+                    video_data.append({
+                        'item_id': item_label,  # 🔥 한글(kw) 대신 인덱스 기반 라벨(Item_n) 저장
+                        'video_id': v_id,
+                        'published_at': snippet['publishedAt'],
+                        'view_count': int(stats.get('viewCount', 0))
+                    })
+                except:
+                    continue
+
+            next_page_token = res.get('nextPageToken')
+            if not next_page_token: break
+
+        except Exception as e:
+            print(f"API 에러: {e}")
+            break
+
+    time.sleep(1) # API 할당량 보호
+
+df_raw = pd.DataFrame(video_data)
+print(f"총 {len(df_raw)}개의 영상 데이터 수집 완료!")
+
+
+# ==========================================
+# 3. 데이터 전처리 (월별 그룹핑 -> T=0 정렬 -> Y축 정규화 -> 이동평균)
+# ==========================================
+df_raw['published_at'] = pd.to_datetime(df_raw['published_at'])
+df_raw['year_month'] = df_raw['published_at'].dt.to_period('M').dt.to_timestamp()
+
+# 1) 월별 총 조회수로 뭉치기
+trend_df = df_raw.groupby(['item_id', 'year_month'])['view_count'].sum().reset_index()
+
+# 2) T=0 정렬 (상대 시간축)
+start_months = trend_df.groupby('item_id')['year_month'].transform('min')
+trend_df['month_t'] = (trend_df['year_month'].dt.year - start_months.dt.year) * 12 + \
+                      (trend_df['year_month'].dt.month - start_months.dt.month)
+
+# 3) Y축 정규화 (최고점 100%)
+max_views = trend_df.groupby('item_id')['view_count'].transform('max')
+trend_df['view_ratio(%)'] = (trend_df['view_count'] / max_views) * 100
+
+# 4) 🌟 선 부드럽게 만들기 (3개월 이동평균 스무딩)
+trend_df['smoothed_ratio(%)'] = trend_df.groupby('item_id')['view_ratio(%)'].transform(
+    lambda x: x.rolling(window=3, min_periods=1).mean()
+)
+
+
+# ==========================================
+# 4. 시각화 (한글 없이 영문으로만 깔끔하게 출력)
+# ==========================================
+plt.figure(figsize=(10, 6))
+
+# 노이즈가 제거된 'smoothed_ratio(%)'를 Y축으로 사용합니다.
+sns.lineplot(
+    data=trend_df,
+    x='month_t',
+    y='smoothed_ratio(%)',
+    hue='item_id',
+    marker='o',
+    linewidth=2,
+    alpha=0.7 # 선이 겹쳐도 잘 보이게 투명도 약간 추가
+)
+
+plt.title('Trend Lifecycle Pattern Verification (T=0, Smoothed)', fontsize=16)
+plt.xlabel('Months since first appearance (T+n)', fontsize=12)
+plt.ylabel('View Count Ratio (% to Max)', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.5)
+
+# X축 촘촘하게 설정 (최대 36개월까지만 잘라서 보여주기)
+max_month = min(trend_df['month_t'].max(), 36)
+plt.xlim(-1, max_month + 1)
+plt.xticks(range(0, max_month + 1, 2)) # 2개월 단위로 눈금
+
+plt.legend(title='Item Index', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+
+
+--- cell 8 ---
+# --- [Cell 2: 정제 - 단위 시간당 반응(Velocity) 기반 주차별 그룹화] ---
+import pandas as pd
+
+# 1. 날짜 데이터 타입 변환 (현재 시간 기준)
+df_raw['published_at'] = pd.to_datetime(df_raw['published_at'])
+now = pd.to_datetime('now', utc=True)
+
+# 2. 영상 생존 일수(나이) 및 '하루 평균 조회수(가속도)' 추출 ★누적의 함정 해결★
+df_raw['video_age_days'] = (now - df_raw['published_at']).dt.days
+df_raw['video_age_days'] = df_raw['video_age_days'].replace(0, 1) # 오늘 올라온 영상 0 나누기 에러 방지
+df_raw['views_per_day'] = df_raw['view_count'] / df_raw['video_age_days']
+
+# 3. 주차별(Week) 그룹화
+df_raw['week'] = df_raw['published_at'].dt.to_period('W').apply(lambda r: r.start_time)
+
+# 누적합이 아닌 해당 주차 영상들의 '평균 가속도' 산출
+df_weekly = df_raw.groupby('week').agg(
+    video_supply=('video_id', 'count'),          # 공급량: 새로 올라온 영상 개수
+    avg_velocity=('views_per_day', 'mean'),      # 반응량: 하루 평균 조회수
+    total_comments=('comment_count', 'sum')      # 향후 댓글 분석을 위한 보존
+).reset_index()
+
+# 4. 노이즈 제거 (영상이 1개 이상 올라온 주차만 분석)
+df_weekly = df_weekly[df_weekly['video_supply'] > 0].reset_index(drop=True)
+
+print("--- Cell 2: 단위 시간당 반응을 반영한 데이터 정제 완료! ---")
+display(df_weekly.head())
+
+
+--- cell 10 ---
+# --- [Cell 3: 분석 - 파생 변수 생성 및 Z-Score 스케일링] ---
+
+# 1. 수요-공급 압력 (Demand Pressure) 계산
+# 하루 평균 조회수를 공급량(영상 수)으로 나누어, 영상 1개가 감당하는 파괴력 계산
+df_weekly['demand_pressure'] = df_weekly['avg_velocity'] / df_weekly['video_supply']
+
+# 2. Z-Score 스케일링 함수 정의 (평균 0, 표준편차 1)
+def calculate_zscore(col):
+    return (col - col.mean()) / col.std()
+
+# 3. 주요 지표들에 Z-Score 적용
+columns_to_scale = ['video_supply', 'avg_velocity', 'demand_pressure']
+for col in columns_to_scale:
+    df_weekly[f'{col}_Z'] = calculate_zscore(df_weekly[col])
+
+print("--- Cell 3: 파생 변수 생성 및 Z-Score 스케일링 완료! ---")
+display(df_weekly[['week', 'video_supply_Z', 'avg_velocity_Z', 'demand_pressure_Z']].head())
+
+
+--- cell 12 ---
+# --- [Cell 4: 유행 임계점 시각화 (Velocity 반영)] ---
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(14, 7))
+
+# 1. 시각화할 Z-Score 라인 그리기 (변수명 업데이트)
+sns.lineplot(data=df_weekly, x='week', y='video_supply_Z', marker='o', label='Supply (Video Count)', color='grey', alpha=0.6)
+sns.lineplot(data=df_weekly, x='week', y='avg_velocity_Z', marker='s', label='Demand (Daily Velocity)', color='blue') # 여기 수정됨
+sns.lineplot(data=df_weekly, x='week', y='demand_pressure_Z', marker='^', label='Pressure (Velocity per Video)', color='skyblue', linewidth=2.5)
+
+# 2. 기준선(Baseline) 긋기
+plt.axhline(0, color='black', linestyle='--', linewidth=1) # 평균선
+plt.axhline(1.5, color='orange', linestyle=':', linewidth=2, label='Breakout Threshold (Z=1.5)') # 유행 임계점
+
+# 3. 그래프 꾸미기
+plt.title("Trend Analysis: Breakout Detection (Velocity Z-Score)", fontsize=16)
+plt.ylabel("Z-Score (Standardized)", fontsize=12)
+plt.xlabel("Upload Week", fontsize=12)
+plt.xticks(rotation=45)
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+
+plt.show()
+
+
+--- cell 16 ---
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+# 🌟 코랩용 나눔 폰트로 설정 변경
+plt.rc('font', family='NanumBarunGothic')
+plt.rcParams['axes.unicode_minus'] = False
+
+# ... (이하 시각화 코드 동일) ...
+plt.figure(figsize=(12, 6))
+
+# 🌟 핵심 코드: hue='키워드' 를 넣으면 알아서 그룹을 나눠서 그려줍니다!
+sns.lineplot(
+    data=df_trend,
+    x='날짜',
+    y='트렌드_스코어',
+    hue='키워드',      # 키워드별로 색상 구분
+    linewidth=2.5,     # 선 굵기
+    alpha=0.8          # 투명도 조절 (선이 겹칠 때를 대비)
+)
+
+# ==========================================
+# 3. 디테일 꾸미기
+# ==========================================
+plt.title('2026년 디저트 키워드 검색 트렌드 비교 (우베 떡상장)', fontsize=16, fontweight='bold')
+plt.xlabel('날짜', fontsize=12)
+plt.ylabel('상대적 검색 비율 (Max=100)', fontsize=12)
+
+# 범례(Legend) 위치를 그래프 바깥으로 빼서 깔끔하게 정리
+plt.legend(title='품목', bbox_to_anchor=(1.02, 1), loc='upper left')
+
+# 점선 그리드 추가로 가독성 향상
+plt.grid(True, linestyle='--', alpha=0.6)
+
+plt.tight_layout() # 잘리는 부분 없이 여백 자동 조정
+import matplotlib.ticker as ticker
+
+# (기존 코드) plt.grid(True, linestyle='--', alpha=0.6) 바로 아래에 추가하세요!
+
+# 1. X축 눈금 개수를 10개 내외로 알아서 줄여주는 마법의 코드
+ax = plt.gca()
+ax.xaxis.set_major_locator(ticker.MaxNLocator(nbins=12))
+
+# 2. 글자가 겹치지 않게 45도 기울이기
+plt.xticks(rotation=45)
+
+plt.tight_layout()
+plt.show()
+
+
+--- cell 17 ---
+# 나눔 폰트 설치 및 맷플롯립 캐시 삭제
+!sudo apt-get install -y fonts-nanum
+!sudo fc-cache -fv
+!rm ~/.cache/matplotlib -rf
+
+
+--- cell 18 ---
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.ticker as ticker
+
+# 1. 한글 폰트 설정 (이전과 동일)
+plt.rcParams['font.family'] = 'NanumBarunGothic' # 코랩 기준 (Mac은 AppleGothic)
+plt.rcParams['axes.unicode_minus'] = False
+
+# 2. 다중 패널(FacetGrid) 그래프 그리기
+# - col="키워드": 키워드별로 그래프를 따로따로 분리하겠다는 마법의 옵션
+# - col_wrap=3: 한 줄에 그래프를 3개씩만 그리고 다음 줄로 넘김
+# - sharey=False: 아이템마다 스케일이 다르므로 Y축 높이를 각자 기준에 맞춤 (패턴 보기에 유리)
+g = sns.FacetGrid(df_trend, col="키워드", col_wrap=3, height=4, aspect=1.2, sharey=False)
+
+# 분리된 각각의 도화지에 선 그래프(lineplot)를 매핑
+g.map(sns.lineplot, "날짜", "트렌드_스코어", linewidth=2.5, color='steelblue')
+
+# 3. 디테일 다듬기
+g.set_titles("[{col_name}] 생애주기 검증", size=14, weight='bold') # 각 그래프 제목
+g.set_axis_labels("날짜", "검색 스코어") # 축 이름
+
+# 모든 하위 그래프의 X축 날짜를 45도 기울이고 눈금 개수 조절
+for ax in g.axes.flat:
+    ax.xaxis.set_major_locator(ticker.MaxNLocator(nbins=6)) # 날짜 6개만 표시
+    for label in ax.get_xticklabels():
+        label.set_rotation(45)
+    ax.grid(True, linestyle='--', alpha=0.5)
+
+plt.tight_layout()
+plt.show()
+
+
+--- cell 19 ---
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 1. 폰트 설정 (기존 환경 유지)
+plt.rcParams['font.family'] = 'NanumBarunGothic' # Mac은 'AppleGothic'
+plt.rcParams['axes.unicode_minus'] = False
+
+# ==========================================
+# STEP 1. X축 정규화: Peak Day를 T=0 으로 맞추기
+# ==========================================
+# 1) 각 키워드별로 트렌드 스코어가 가장 높았던(Peak) 날짜 찾기
+peak_idx = df_trend.groupby('키워드')['트렌드_스코어'].idxmax()
+peak_info = df_trend.loc[peak_idx, ['키워드', '날짜']].rename(columns={'날짜': '피크_날짜'})
+
+# 2) 원본 데이터에 피크 날짜를 붙이고, '경과 일수(T_Day)' 계산
+df_norm = pd.merge(df_trend, peak_info, on='키워드', how='left')
+df_norm['날짜'] = pd.to_datetime(df_norm['날짜'])
+df_norm['피크_날짜'] = pd.to_datetime(df_norm['피크_날짜'])
+
+# 핵심: 기준일(Peak)로부터 며칠 전(-)이고 며칠 후(+)인지 계산
+df_norm['T_Day'] = (df_norm['날짜'] - df_norm['피크_날짜']).dt.days
+
+# ==========================================
+# STEP 2. Y축 정규화: Min-Max Scaling (0~100%)
+# ==========================================
+# 각 키워드별 최솟값과 최댓값 추출
+min_max = df_norm.groupby('키워드')['트렌드_스코어'].agg(['min', 'max']).reset_index()
+df_norm = pd.merge(df_norm, min_max, on='키워드', how='left')
+
+# 핵심: (현재값 - 최솟값) / (최댓값 - 최솟값) * 100
+df_norm['정규화_스코어(%)'] = ((df_norm['트렌드_스코어'] - df_norm['min']) /
+                            (df_norm['max'] - df_norm['min'])) * 100
+
+
+# ==========================================
+# STEP 3. 시각화: 오버레이 및 마스터 곡선(평균) 도출
+# ==========================================
+plt.figure(figsize=(12, 7))
+
+# 1) 개별 유행 아이템들의 궤적 (배경으로 얇고 투명하게 깔기)
+sns.lineplot(
+    data=df_norm,
+    x='T_Day',
+    y='정규화_스코어(%)',
+    hue='키워드',
+    alpha=0.3,       # 투명도 조절로 겹쳐도 보이게
+    linewidth=1.5,
+    legend=False     # 선이 너무 많으면 지저분하므로 범례 생략
+)
+
+# 2) 🌟 머신러닝의 정답지가 될 '마스터 평균 곡선' (두껍고 진하게)
+sns.lineplot(
+    data=df_norm,
+    x='T_Day',
+    y='정규화_스코어(%)',
+    color='red',
+    linewidth=4,
+    label='Universal Master Curve (전체 평균 궤적)',
+    errorbar=None    # 그림자(신뢰구간) 제거하여 깔끔하게
+)
+
+# 3) 차트 디테일 세팅
+plt.axvline(x=0, color='black', linestyle='--', alpha=0.7, label='Peak Day (T=0)') # 중앙 수직선
+plt.axhline(y=100, color='black', linestyle=':', alpha=0.5) # 천장 수평선
+
+plt.title('유행 수명주기 가설 최종 검증 (T=0 & Min-Max 정규화 오버레이)', fontsize=16, fontweight='bold')
+plt.xlabel('최고점 도달 전/후 경과 일수 (T-Day)', fontsize=12)
+plt.ylabel('정규화된 검색 스코어 (Min=0, Max=100%)', fontsize=12)
+
+# X축 범위를 -60일 ~ +60일 정도로 제한하여 '산 모양'이 잘 보이는 구간에 돋보기 대기
+# (데이터 길이에 맞춰 조절하세요)
+plt.xlim(-60, 60)
+
+plt.grid(True, linestyle=':', alpha=0.6)
+plt.legend(loc='upper left')
+plt.tight_layout()
+plt.show()
+
+
+--- cell 20 ---
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. 한글 폰트 설정
+plt.rcParams['font.family'] = 'NanumBarunGothic' # Mac은 'AppleGothic'
+plt.rcParams['axes.unicode_minus'] = False
+
+# ==========================================
+# 1. 실시간 알림 판별 함수 (EMA + Z-Score)
+# ==========================================
+def detect_trend_breakout(df, score_col='트렌드_스코어', ema_span=3, window=14, z_thresh=2.5, min_score=3.0):
+    """
+    ema_span: EMA 계산 기간 (보통 3일로 매우 민첩하게 세팅)
+    window: Z-Score를 계산할 과거 비교 기간 (보통 14일~30일)
+    z_thresh: 몇 표준편차를 벗어나야 알림을 울릴 것인가? (2.5면 매우 엄격함)
+    min_score: 노이즈 방지용 절대 점수 하한선
+    """
+    d = df.copy()
+
+    # 1) EMA(지수이동평균) 계산 - 최근 데이터에 가중치
+    d['EMA'] = d[score_col].ewm(span=ema_span, adjust=False).mean()
+
+    # 2) 과거 window 기간 동안의 평균(Mean)과 표준편차(Std) 계산
+    # min_periods=1 을 주어 데이터가 부족한 극초반에도 에러가 나지 않게 함
+    rolling_mean = d['EMA'].rolling(window=window, min_periods=1).mean()
+    rolling_std = d['EMA'].rolling(window=window, min_periods=1).std()
+
+    # 분모가 0이 되는 것을 방지하기 위해 아주 작은 값(1e-5) 더하기
+    d['Z_Score'] = (d['EMA'] - rolling_mean) / (rolling_std + 1e-5)
+
+    # 3) 알림(Alert) 조건 판별 (AND 조건)
+    # 조건 A: 통계적 이상치 폭발 (Z-Score > 설정값)
+    # 조건 B: 최소한의 검색량은 확보할 것 (EMA > 하한선)
+    d['Alert'] = (d['Z_Score'] >= z_thresh) & (d['EMA'] >= min_score)
+
+    return d
+
+# ==========================================
+# 2. 로직 검증을 위한 테스트 (우베 데이터 적용 가정)
+# ==========================================
+# (df_trend 데이터 중 '우베' 데이터만 뽑았다고 가정)
+df_ube = df_trend[df_trend['키워드'] == '우베'].copy().reset_index(drop=True)
+
+df_ube['날짜'] = pd.to_datetime(df_ube['날짜'])
+
+# 함수 적용: Z-score 2.5 이상, 최소 스코어 3.0 이상일 때 알림!
+df_result = detect_trend_breakout(df_ube, z_thresh=2.5, min_score=3.0)
+
+# 알림이 울린 날짜만 추출
+alert_days = df_result[df_result['Alert'] == True]
+
+# ==========================================
+# 3. 시각화: 시스템이 언제 알림을 울렸는지 확인
+# ==========================================
+plt.figure(figsize=(12, 5))
+
+# 원본 데이터와 EMA 선 그리기
+plt.plot(df_result['날짜'], df_result['트렌드_스코어'], label='원본 일간 스코어', color='lightgray', linestyle='--')
+plt.plot(df_result['날짜'], df_result['EMA'], label='EMA (3일 지수이동평균)', color='purple', linewidth=2)
+
+# 알림(Alert)이 터진 지점에 빨간 점 찍기
+plt.scatter(alert_days['날짜'], alert_days['EMA'], color='yellow', s=80, zorder=3, label='🚨 트렌드 급상승 알림 (Triggered)')
+
+plt.title('실시간 트렌드 경보 시스템 테스트 (EMA + Z-Score 2.5 돌파 기준)', fontsize=15, fontweight='bold')
+plt.xlabel('날짜')
+plt.ylabel('검색 스코어')
+plt.axhline(y=3.0, color='orange', linestyle=':', alpha=0.7, label='최소 스코어 방어선 (Min=3.0)')
+plt.legend()
+plt.grid(True, linestyle=':', alpha=0.5)
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+print(f"총 {len(alert_days)}번의 트렌드 급상승 알림이 발생했습니다.")
+if not alert_days.empty:
+    print(f"최초 발견 날짜: {alert_days['날짜'].iloc[0].strftime('%Y-%m-%d')}")
+
+hits 12
+
+
+### 두쫀쿠_크롤러의_사본.ipynb
+
+
+--- cell 2 ---
+from googleapiclient.discovery import build
+import pandas as pd
+
+# 1. API 설정 (AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI)
+API_KEY = "AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI"
+youtube = build('youtube', 'v3', developerKey=API_KEY)
+
+# 2. '두바이 쫀득 쿠키' 검색 및 영상 정보 수집
+search_response = youtube.search().list(
+    q='우베',
+    part='snippet',
+    maxResults=50,
+    type='video',
+    order='viewCount', # 조회수 높은 순
+    publishedAfter='2025-12-01T00:00:00Z', # 12월 1일 이후
+    publishedBefore='2026-04-07T23:59:59Z' # 현재까지
+).execute()
+
+videos = []
+for item in search_response['items']:
+    v_id = item['id']['videoId']
+
+    # 상세 통계(조회수, 댓글) 가져오기
+    stats_req = youtube.videos().list(
+        part='statistics,snippet',
+        id=v_id
+    ).execute()
+
+    snippet = stats_req['items'][0]['snippet']
+    stats = stats_req['items'][0]['statistics']
+
+    videos.append({
+        'title': snippet['title'],
+        'published_at': snippet['publishedAt'],
+        'view_count': int(stats.get('viewCount', 0)),
+        'comment_count': int(stats.get('commentCount', 0)),
+        'like_count': int(stats.get('likeCount', 0))
+    })
+
+# 3. 데이터프레임 확인
+df_youtube = pd.DataFrame(videos)
+df_youtube['published_at'] = pd.to_datetime(df_youtube['published_at'])
+print("--- 유튜브 데이터 수집 성공! ---")
+print(df_youtube.sort_values(by='published_at').head()) # 월 영상부터 확인
+
+
+--- cell 3 ---
+video_data = []
+next_page_token = None
+
+# 최대 5페이지(약 250개)까지 긁어보는 루프
+for i in range(5):
+    search_response = youtube.search().list(
+        q='우베',
+        part='snippet',
+        maxResults=50,
+        type='video',
+        order='viewCount',
+        pageToken=next_page_token, # 다음 페이지 토큰 전달
+        publishedAfter='2025-12-01T00:00:00Z'
+    ).execute()
+
+    for item in search_response['items']:
+        # (기존 영상 정보 수집 로직 동일...)
+        v_id = item['id']['videoId']
+        # ...중략...
+        video_data.append({...})
+
+    # 다음 페이지가 없으면 종료
+    next_page_token = search_response.get('nextPageToken')
+    if not next_page_token:
+        break
+
+df_youtube = pd.DataFrame(video_data)
+print(f"총 {len(df_youtube)}개의 영상 데이터를 수집했습니다!")
+
+
+--- cell 4 ---
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from googleapiclient.discovery import build
+from datetime import datetime
+
+# 1. API 설정
+API_KEY = "AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI"
+youtube = build('youtube', 'v3', developerKey=API_KEY)
+
+# 2. 데이터 수집 (video_id 포함 버전)
+video_data = []
+next_page_token = None
+
+for i in range(5): # 약 250개 수집
+    res = youtube.search().list(
+        q='우베', part='snippet', maxResults=50, type='video',
+        order='viewCount', pageToken=next_page_token, publishedAfter='2025-12-01T00:00:00Z'
+    ).execute()
+
+    for item in res['items']:
+        v_id = item['id']['videoId'] # 이 ID가 핵심입니다!
+        snippet = item['snippet']
+
+        stats_res = youtube.videos().list(part='statistics', id=v_id).execute()
+        stats = stats_res['items'][0]['statistics']
+
+        video_data.append({
+            'video_id': v_id, # 컬럼 추가!
+            'title': snippet['title'],
+            'published_at': snippet['publishedAt'],
+            'view_count': int(stats.get('viewCount', 0)),
+            'comment_count': int(stats.get('commentCount', 0))
+        })
+    next_page_token = res.get('nextPageToken')
+    if not next_page_token: break
+
+df_youtube = pd.DataFrame(video_data)
+df_youtube['published_at'] = pd.to_datetime(df_youtube['published_at'])
+
+# 3. [시점별 파티션] 누적 조회수 함정 해결 로직
+# 업로드 주차별로 묶어 '평균 조회수'를 봅니다.
+df_youtube['week'] = df_youtube['published_at'].dt.to_period('W').apply(lambda r: r.start_time)
+weekly_avg = df_youtube.groupby('week')['view_count'].mean().reset_index()
+
+# 4. [댓글 시점 분석] 상위 3개 영상의 진짜 유행 시점 확인
+all_comment_dates = []
+top_3_ids = df_youtube.sort_values(by='view_count', ascending=False).head(3)['video_id']
+
+print("--- 상위 영상의 댓글 작성 시점 수집 중... ---")
+for v_id in top_3_ids:
+    try:
+        c_res = youtube.commentThreads().list(part="snippet", videoId=v_id, maxResults=100).execute()
+        for c_item in c_res['items']:
+            date_str = c_item['snippet']['topLevelComment']['snippet']['publishedAt']
+            all_comment_dates.append(pd.to_datetime(date_str))
+    except: continue
+
+# 5. 시각화 (기획서 52번 시각화 모듈 반영)
+plt.figure(figsize=(15, 6))
+
+# 왼쪽: 주차별 평균 조회수 (어느 시기 영상이 가장 파급력이 컸나?)
+plt.subplot(1, 2, 1)
+sns.lineplot(data=weekly_avg, x='week', y='view_count', marker='o', color='blue')
+plt.title('Average View Count by Upload Week', fontsize=12)
+plt.xticks(rotation=45)
+
+# 오른쪽: 댓글 작성 시점 분포 (실제 시청자들이 반응한 진짜 유행 시점)
+plt.subplot(1, 2, 2)
+comment_df = pd.DataFrame(all_comment_dates, columns=['date'])
+comment_df['week'] = comment_df['date'].dt.to_period('W').apply(lambda r: r.start_time)
+sns.histplot(data=comment_df, x='week', bins=20, color='orange', kde=True)
+plt.title('Real-time Interest (Comment Date Distribution)', fontsize=12)
+plt.xticks(rotation=45)
+
+plt.tight_layout()
+plt.show()
+
+# 데이터 저장
+df_youtube.to_csv("youtube_final_analysis.csv", encoding='utf-8-sig', index=False)
+
+
+--- cell 5 ---
+# --- [데이터 생성 단계] partition_df를 먼저 만들어야 합니다 ---
+
+# 1. 주차별로 영상 개수(supply)와 조회수 합계(view_count)를 계산
+partition_df = df_youtube.groupby('week').agg({
+    'video_id': 'count',      # 공급량 (새로운 영상 개수)
+    'view_count': 'sum'       # 반응량 (총 조회수)
+}).reset_index()
+
+# 컬럼명 변경 (시각화 코드와 일치시키기)
+partition_df.columns = ['week', 'content_supply', 'view_count']
+
+# --- [기존 시각화 코드 실행] ---
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 1. 데이터 타입 강제 변환
+partition_df['week'] = pd.to_datetime(partition_df['week'].astype(str))
+
+# 2. 이중 축 시각화
+fig, ax1 = plt.subplots(figsize=(14, 7))
+
+# 축 1: 컨텐츠 공급량 (막대 그래프)
+sns.barplot(data=partition_df, x='week', y='content_supply', alpha=0.3, color='grey', ax=ax1)
+ax1.set_ylabel('New Videos Count (Supply)', fontsize=12)
+
+# X축 날짜 포맷 다듬기
+x_labels = [d.strftime('%Y-%m-%d') for d in partition_df['week']]
+ax1.set_xticklabels(x_labels, rotation=45)
+
+# 축 2: 총 조회수 (선 그래프)
+ax2 = ax1.twinx()
+# lineplot의 x축을 range로 잡을 경우 막대 그래프와 위치가 어긋날 수 있어 x='week'를 사용하거나
+# 범주형 인덱스를 활용하는 것이 정확합니다.
+sns.lineplot(data=partition_df, x=ax1.get_xticks(), y='view_count', marker='o', color='red', ax=ax2, label='Total Views (Reaction)')
+ax2.set_ylabel('Total View Count', fontsize=12)
+
+plt.title('Ube Supply(Video) vs Reaction(View) Partition', fontsize=16)
+ax1.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+print("파티션 시각화 성공! 이제 막대와 선의 간격을 분석해보세요.")
+
+
+--- cell 6 ---
+# --- [2단계: 입체적 파티션 분석 및 시각화 - 수정본] ---
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 1. 데이터 타입 강제 변환 (에러 해결 지점!)
+# Period 객체를 다시 Datetime으로 변환해야 시각화 도구가 인식합니다.
+partition_df['week'] = pd.to_datetime(partition_df['week'].astype(str))
+
+# 2. 이중 축 시각화 (MP의 핵심 결과물)
+fig, ax1 = plt.subplots(figsize=(14, 7))
+
+# 축 1: 컨텐츠 공급량 (막대 그래프) - 유행에 참여한 크리에이터 수 [cite: 33]
+sns.barplot(data=partition_df, x='week', y='content_supply', alpha=0.3, color='grey', ax=ax1)
+ax1.set_ylabel('New Videos Count (Supply)', fontsize=12)
+
+# X축 날짜 포맷 예쁘게 다듬기
+x_labels = [d.strftime('%Y-%m-%d') for d in partition_df['week']]
+ax1.set_xticklabels(x_labels, rotation=45)
+
+# 축 2: 총 조회수 (선 그래프) - 실제 대중의 반응량 [cite: 33, 51]
+ax2 = ax1.twinx()
+sns.lineplot(data=partition_df, x=range(len(partition_df)), y='view_count', marker='o', color='red', ax=ax2, label='Total Views (Reaction)')
+ax2.set_ylabel('Total View Count', fontsize=12)
+
+plt.title('chag-uk-riceake Supply(Video) vs Reaction(View) Partition', fontsize=16)
+ax1.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+print("파티션 시각화 성공! 이제 막대와 선의 간격을 분석해보세요.")
+
+
+--- cell 7 ---
+import pandas as pd
+
+# 1. 수집한 250개 데이터를 불러옵니다.
+df = pd.read_csv('youtube_final_analysis.csv')
+df['week'] = pd.to_datetime(df['week'])
+
+# 2. [진짜 파티션 분석] 주차별로 묶어서 공급량과 반응량을 계산합니다.
+trend_summary = df.groupby('week').agg({
+    'video_id': 'count',       # 컨텐츠 생성량 (Supply: 언제 영상이 많이 올라왔나?)
+    'view_count': 'sum',       # 반응량 (Demand: 조회수 합계)
+    'comment_count': 'sum'     # 반응량 (Demand: 댓글 수 합계)
+}).reset_index().rename(columns={'video_id': 'content_supply'})
+
+# 3. 효율성 지표 추가 (영상의 파괴력 확인)
+trend_summary['view_per_video'] = trend_summary['view_count'] / trend_summary['content_supply']
+
+# 4. 결과 확인 및 저장
+print("--- 주차별 유행 파티션 분석 완료 ---")
+print(trend_summary.sort_values(by='week'))
+trend_summary.to_csv("trend_summary_partition.csv", index=False, encoding='utf-8-sig')
+
+hits 6
+
+
+### 우베.ipynb
+
+
+--- cell 1 ---
+# --- [Cell 1: 데이터 수집] ---
+from googleapiclient.discovery import build
+import pandas as pd
+
+# 1. API 키와 검색어 설정(AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI)
+API_KEY ="AIzaSyAiIOgmEPQMYUp0xRpyqkUWxQ_hO9GDgKI"
+youtube = build('youtube', 'v3', developerKey=API_KEY)
+keyword = input('검색어를 입력해 주세요 (예: 두바이 쫀득 쿠키): ')
+
+# 2. 데이터 수집 루프 (최대 5페이지, 약 250개)
+video_data = []
+next_page_token = None
+
+print(f"'{keyword}' 검색을 시작합니다...")
+for i in range(5):
+    res = youtube.search().list(
+        q=keyword, part='snippet', maxResults=50, type='video',
+        order='viewCount', pageToken=next_page_token,
+        publishedAfter='2026-01-01T00:00:00Z' # 시작 일자 설정
+    ).execute()
+
+    for item in res['items']:
+        v_id = item['id']['videoId']
+        snippet = item['snippet']
+
+        # 상세 통계 가져오기 (try-except로 오류 방지)
+        try:
+            stats_res = youtube.videos().list(part='statistics', id=v_id).execute()
+            stats = stats_res['items'][0]['statistics']
+
+            video_data.append({
+                'video_id': v_id,
+                'published_at': snippet['publishedAt'],
+                'view_count': int(stats.get('viewCount', 0)),
+                'comment_count': int(stats.get('commentCount', 0))
+            })
+        except:
+            continue
+
+    next_page_token = res.get('nextPageToken')
+    if not next_page_token: break
+
+# 3. 데이터프레임으로 변환
+df_raw = pd.DataFrame(video_data)
+print(f"총 {len(df_raw)}개의 영상 데이터 수집 완료!")
+
+
+--- cell 4 ---
+# --- [Cell 2: 정제 - 단위 시간당 반응(Velocity) 기반 주차별 그룹화] ---
+import pandas as pd
+
+# 1. 날짜 데이터 타입 변환 (현재 시간 기준)
+df_raw['published_at'] = pd.to_datetime(df_raw['published_at'])
+now = pd.to_datetime('now', utc=True)
+
+# 2. 영상 생존 일수(나이) 및 '하루 평균 조회수(가속도)' 추출 ★누적의 함정 해결★
+df_raw['video_age_days'] = (now - df_raw['published_at']).dt.days
+df_raw['video_age_days'] = df_raw['video_age_days'].replace(0, 1) # 오늘 올라온 영상 0 나누기 에러 방지
+df_raw['views_per_day'] = df_raw['view_count'] / df_raw['video_age_days']
+
+# 3. 주차별(Week) 그룹화
+df_raw['week'] = df_raw['published_at'].dt.to_period('W').apply(lambda r: r.start_time)
+
+# 누적합이 아닌 해당 주차 영상들의 '평균 가속도' 산출
+df_weekly = df_raw.groupby('week').agg(
+    video_supply=('video_id', 'count'),          # 공급량: 새로 올라온 영상 개수
+    avg_velocity=('views_per_day', 'mean'),      # 반응량: 하루 평균 조회수
+    total_comments=('comment_count', 'sum')      # 향후 댓글 분석을 위한 보존
+).reset_index()
+
+# 4. 노이즈 제거 (영상이 1개 이상 올라온 주차만 분석)
+df_weekly = df_weekly[df_weekly['video_supply'] > 0].reset_index(drop=True)
+
+print("--- Cell 2: 단위 시간당 반응을 반영한 데이터 정제 완료! ---")
+display(df_weekly.head())
+
+
+--- cell 6 ---
+# --- [Cell 3: 분석 - 파생 변수 생성 및 Z-Score 스케일링] ---
+
+# 1. 수요-공급 압력 (Demand Pressure) 계산
+# 하루 평균 조회수를 공급량(영상 수)으로 나누어, 영상 1개가 감당하는 파괴력 계산
+df_weekly['demand_pressure'] = df_weekly['avg_velocity'] / df_weekly['video_supply']
+
+# 2. Z-Score 스케일링 함수 정의 (평균 0, 표준편차 1)
+def calculate_zscore(col):
+    return (col - col.mean()) / col.std()
+
+# 3. 주요 지표들에 Z-Score 적용
+columns_to_scale = ['video_supply', 'avg_velocity', 'demand_pressure']
+for col in columns_to_scale:
+    df_weekly[f'{col}_Z'] = calculate_zscore(df_weekly[col])
+
+print("--- Cell 3: 파생 변수 생성 및 Z-Score 스케일링 완료! ---")
+display(df_weekly[['week', 'video_supply_Z', 'avg_velocity_Z', 'demand_pressure_Z']].head())
+
+
+--- cell 8 ---
+# --- [Cell 4: 유행 임계점 시각화 (Velocity 반영)] ---
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(14, 7))
+
+# 1. 시각화할 Z-Score 라인 그리기 (변수명 업데이트)
+sns.lineplot(data=df_weekly, x='week', y='video_supply_Z', marker='o', label='Supply (Video Count)', color='grey', alpha=0.6)
+sns.lineplot(data=df_weekly, x='week', y='avg_velocity_Z', marker='s', label='Demand (Daily Velocity)', color='blue') # 여기 수정됨
+sns.lineplot(data=df_weekly, x='week', y='demand_pressure_Z', marker='^', label='Pressure (Velocity per Video)', color='skyblue', linewidth=2.5)
+
+# 2. 기준선(Baseline) 긋기
+plt.axhline(0, color='black', linestyle='--', linewidth=1) # 평균선
+plt.axhline(1.5, color='orange', linestyle=':', linewidth=2, label='Breakout Threshold (Z=1.5)') # 유행 임계점
+
+# 3. 그래프 꾸미기
+plt.title("Trend Analysis: Breakout Detection (Velocity Z-Score)", fontsize=16)
+plt.ylabel("Z-Score (Standardized)", fontsize=12)
+plt.xlabel("Upload Week", fontsize=12)
+plt.xticks(rotation=45)
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+
+plt.show()
+
+hits 4

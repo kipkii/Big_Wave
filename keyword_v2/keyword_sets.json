@@ -1,0 +1,29 @@
+[
+  {
+    "category": "F&B",
+    "keyword_set": {
+      "canonical": "두쫀쿠",
+      "alias": ["두바이 쫀득 쿠키", "두바이초콜릿쿠키", "두바이 초콜릿 쿠키"],
+      "typo": ["두존쿠", "두쫀크"],
+      "related": ["카다이프", "피스타치오", "두바이 초콜릿"]
+    }
+  },
+  {
+    "category": "F&B",
+    "keyword_set": {
+      "canonical": "버터떡",
+      "alias": ["버터 떡", "butter rice cake", "버터떡 디저트"],
+      "typo": ["버터덕"],
+      "related": ["약과", "인절미", "떡 디저트"]
+    }
+  },
+  {
+    "category": "F&B",
+    "keyword_set": {
+      "canonical": "우베",
+      "alias": ["ube", "우베 디저트", "우베맛"],
+      "typo": ["우배"],
+      "related": ["보라색 디저트", "필리핀 디저트", "우베 케이크"]
+    }
+  }
+]
